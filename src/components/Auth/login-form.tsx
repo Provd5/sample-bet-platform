@@ -2,9 +2,16 @@
 
 import type { FC } from "react";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { LoaderCircle } from "lucide-react";
 
+import { createSession } from "~/lib/auth/session";
+import { errorHandler } from "~/lib/error-handler";
+import { auth } from "~/lib/firebase";
 import { loginSchema, type loginSchemaType } from "~/lib/validatorSchemas/auth";
+import ROUTES from "~/utils/routes";
 
 import { Button } from "../ui/button";
 import {
@@ -16,6 +23,7 @@ import {
   FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
+import { useToast } from "../ui/use-toast";
 
 const formFields = [
   {
@@ -33,6 +41,9 @@ const formFields = [
 ];
 
 export const LoginForm: FC = ({}) => {
+  const router = useRouter();
+  const { toast } = useToast();
+
   const form = useForm<loginSchemaType>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -42,7 +53,19 @@ export const LoginForm: FC = ({}) => {
   });
 
   function onSubmit(values: loginSchemaType) {
-    console.log(values);
+    signInWithEmailAndPassword(auth, values.email, values.password)
+      .then(async (userCredential) => {
+        await createSession(userCredential.user.uid).then(() =>
+          router.replace(ROUTES.betting)
+        );
+      })
+      .catch((error: unknown) => {
+        toast({
+          title: "Coś poszło nie tak! 😥",
+          description: errorHandler(error),
+          variant: "destructive",
+        });
+      });
   }
 
   return (
@@ -68,7 +91,12 @@ export const LoginForm: FC = ({}) => {
             )}
           />
         ))}
-        <Button type="submit">Zaloguj</Button>
+        <Button type="submit">
+          Zaloguj
+          {form.formState.isSubmitting && (
+            <LoaderCircle className="animate-spin size-4 ml-1" />
+          )}
+        </Button>
       </form>
     </Form>
   );

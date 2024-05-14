@@ -3,13 +3,15 @@ import type react from "react";
 import Link from "next/link";
 import { Award, Goal, type LucideProps } from "lucide-react";
 
-import { auth } from "~/lib/firebase";
+import { readSessionId } from "~/lib/auth/session";
 import ROUTES from "~/utils/routes";
 
 import { Logout } from "../Auth/logout";
 
-export const NavigationLinks: FC = ({}) => {
-  if (!auth.currentUser) return;
+export const NavigationLinks: FC = async ({}) => {
+  const session = await readSessionId();
+
+  if (!session) return;
 
   return (
     <nav>
@@ -18,7 +20,7 @@ export const NavigationLinks: FC = ({}) => {
           Mecze
         </NavigationLink>
         <NavigationLink Icon={Award} href={ROUTES.results}>
-          Punkty
+          Punktacja
         </NavigationLink>
         <Logout />
       </div>

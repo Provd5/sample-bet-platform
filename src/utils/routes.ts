@@ -1,6 +1,7 @@
 const ROUTES = {
   root: "/",
-  register: "/register",
+  register: "/sign-up",
+  authCallback: "/auth/callback",
   betting: "/betting",
   results: "/results",
 };

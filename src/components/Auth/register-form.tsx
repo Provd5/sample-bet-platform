@@ -2,12 +2,20 @@
 
 import type { FC } from "react";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import { LoaderCircle } from "lucide-react";
 
+import { createSession } from "~/lib/auth/session";
+import { errorHandler } from "~/lib/error-handler";
+import { auth, db } from "~/lib/firebase";
 import {
   registerSchema,
   type registerSchemaType,
 } from "~/lib/validatorSchemas/auth";
+import ROUTES from "~/utils/routes";
 
 import { Button } from "../ui/button";
 import {
@@ -20,6 +28,7 @@ import {
   FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
+import { useToast } from "../ui/use-toast";
 
 const formFields = [
   {
@@ -53,6 +62,9 @@ const formFields = [
 ];
 
 export const RegisterForm: FC = ({}) => {
+  const router = useRouter();
+  const { toast } = useToast();
+
   const form = useForm<registerSchemaType>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
@@ -64,7 +76,36 @@ export const RegisterForm: FC = ({}) => {
   });
 
   function onSubmit(values: registerSchemaType) {
-    console.log(values);
+    if (values.password !== values.repeat_password) {
+      form.setError("repeat_password", {
+        message: "Podane hasła nie pasują do siebie",
+      });
+      return;
+    }
+
+    createUserWithEmailAndPassword(auth, values.email, values.password)
+      .then(async (userCredential) => {
+        await setDoc(doc(db, "users", userCredential.user.uid), {
+          username: values.username,
+          isActive: false,
+        }),
+          await createSession(userCredential.user.uid);
+      })
+      .then(() => router.replace(ROUTES.authCallback))
+      .catch((error: unknown) => {
+        toast({
+          title: "Coś poszło nie tak! 😥",
+          description: errorHandler(error),
+          variant: "destructive",
+        });
+      })
+      .catch((error: unknown) => {
+        toast({
+          title: "Coś poszło nie tak! 😥",
+          description: errorHandler(error),
+          variant: "destructive",
+        });
+      });
   }
 
   return (
@@ -99,7 +140,12 @@ export const RegisterForm: FC = ({}) => {
             )}
           />
         ))}
-        <Button type="submit">Stwórz konto</Button>
+        <Button type="submit">
+          Stwórz konto
+          {form.formState.isSubmitting && (
+            <LoaderCircle className="ml-1 animate-spin size-4" />
+          )}
+        </Button>
       </form>
     </Form>
   );

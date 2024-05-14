@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 
 import { NavigationBar } from "~/components/Nav/navigation-bar";
+import { Toaster } from "~/components/ui/toaster";
 import { cn } from "~/lib/utils";
 
 import "./globals.css";
@@ -10,7 +11,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Betowanie",
+  title: {
+    default: "Betowanie",
+    template: "%s | Betowanie",
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +33,8 @@ export default function RootLayout({
         >
           <NavigationBar />
           <main className="h-full">{children}</main>
+
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
