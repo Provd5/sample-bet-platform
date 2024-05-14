@@ -7,7 +7,7 @@ import { doc, getDoc } from "firebase/firestore";
 
 import { type UserInterface } from "~/types/users";
 
-import ROUTES from "~/utils/routes";
+import ROUTES from "~/constants/routes";
 
 import { errorHandler } from "../error-handler";
 import { auth, db } from "../firebase";
@@ -21,7 +21,8 @@ export async function logOut() {
 
 export async function getUser(id: string): Promise<UserInterface | undefined> {
   try {
-    const user = await getDoc(doc(db, "users", id));
+    const usersRef = doc(db, "users", id);
+    const user = await getDoc(usersRef);
 
     return user.data() as UserInterface | undefined;
   } catch (e) {

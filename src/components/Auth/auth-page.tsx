@@ -3,7 +3,7 @@
 import type { FC } from "react";
 import Link from "next/link";
 
-import ROUTES from "~/utils/routes";
+import ROUTES from "~/constants/routes";
 
 import {
   Card,

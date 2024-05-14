@@ -11,7 +11,7 @@ import { createSession } from "~/lib/auth/session";
 import { errorHandler } from "~/lib/error-handler";
 import { auth } from "~/lib/firebase";
 import { loginSchema, type loginSchemaType } from "~/lib/validatorSchemas/auth";
-import ROUTES from "~/utils/routes";
+import ROUTES from "~/constants/routes";
 
 import { Button } from "../ui/button";
 import {
@@ -52,11 +52,13 @@ export const LoginForm: FC = ({}) => {
     },
   });
 
+  const { formState } = form;
+
   function onSubmit(values: loginSchemaType) {
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then(async (userCredential) => {
         await createSession(userCredential.user.uid).then(() =>
-          router.replace(ROUTES.betting)
+          router.replace(ROUTES.games)
         );
       })
       .catch((error: unknown) => {
@@ -93,7 +95,7 @@ export const LoginForm: FC = ({}) => {
         ))}
         <Button type="submit">
           Zaloguj
-          {form.formState.isSubmitting && (
+          {formState.isSubmitting && (
             <LoaderCircle className="animate-spin size-4 ml-1" />
           )}
         </Button>

@@ -1,12 +1,11 @@
 import type { FC } from "react";
-import type react from "react";
-import Link from "next/link";
-import { Award, Goal, type LucideProps } from "lucide-react";
+import { Award, Goal } from "lucide-react";
 
 import { readSessionId } from "~/lib/auth/session";
-import ROUTES from "~/utils/routes";
+import ROUTES from "~/constants/routes";
 
 import { Logout } from "../Auth/logout";
+import { NavigationLink } from "./navigation-link";
 
 export const NavigationLinks: FC = async ({}) => {
   const session = await readSessionId();
@@ -15,39 +14,17 @@ export const NavigationLinks: FC = async ({}) => {
 
   return (
     <nav>
-      <div className="flex gap-1 items-center">
-        <NavigationLink Icon={Goal} href={ROUTES.betting}>
-          Mecze
+      <div className="flex flex-wrap justify-end gap-1 items-center">
+        <NavigationLink href={ROUTES.games}>
+          <Goal className="size-4" />
+          <span>Mecze</span>
         </NavigationLink>
-        <NavigationLink Icon={Award} href={ROUTES.results}>
-          Punktacja
+        <NavigationLink href={ROUTES.results}>
+          <Award className="size-4" />
+          <span>Punktacja</span>
         </NavigationLink>
         <Logout />
       </div>
     </nav>
-  );
-};
-
-interface NavigationLinkProps {
-  Icon: react.ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & react.RefAttributes<SVGSVGElement>
-  >;
-  href: string;
-  children: React.ReactNode;
-}
-
-export const NavigationLink: FC<NavigationLinkProps> = ({
-  Icon,
-  href,
-  children,
-}) => {
-  return (
-    <Link
-      href={href}
-      className="flex flex-row-reverse gap-1 items-center rounded-md py-3 p-2.5 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground border border-input bg-background"
-    >
-      <Icon className="size-4" />
-      <span>{children}</span>
-    </Link>
   );
 };

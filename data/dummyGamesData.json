@@ -1,0 +1,2616 @@
+[
+  {
+    "awayTeamIcon": "https://crests.football-data.org/67.png",
+    "awayTeamName": "Newcastle United FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/98.png",
+    "homeTeamName": "AC Milan",
+    "id": 451623,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695141900000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/721.png",
+    "awayTeamName": "RB Leipzig",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1871.png",
+    "homeTeamName": "BSC Young Boys",
+    "id": 451637,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695141900000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/78.svg",
+    "awayTeamName": "Club Atlético de Madrid",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/110.png",
+    "homeTeamName": "SS Lazio",
+    "id": 451614,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695150000000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/732.png",
+    "awayTeamName": "Celtic FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/675.png",
+    "homeTeamName": "Feyenoord Rotterdam",
+    "id": 451616,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695150000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/4.png",
+    "awayTeamName": "Borussia Dortmund",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/524.png",
+    "homeTeamName": "Paris Saint-Germain FC",
+    "id": 451630,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695150000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/7283.png",
+    "awayTeamName": "FK Crvena Zvezda",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/65.png",
+    "homeTeamName": "Manchester City FC",
+    "id": 451640,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695150000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1864.png",
+    "awayTeamName": "Royal Antwerp FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 5,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/81.svg",
+    "homeTeamName": "FC Barcelona",
+    "id": 451647,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 5,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695150000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/503.png",
+    "awayTeamName": "FC Porto",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1887.png",
+    "homeTeamName": "FK Shakhtar Donetsk",
+    "id": 451654,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695150000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/28.svg",
+    "awayTeamName": "1. FC Union Berlin",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/86.png",
+    "homeTeamName": "Real Madrid CF",
+    "id": 451586,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695228300000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1876.png",
+    "awayTeamName": "FC København",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/610.png",
+    "homeTeamName": "Galatasaray SK",
+    "id": 451568,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695228300000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/546.png",
+    "awayTeamName": "Racing Club de Lens",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/559.svg",
+    "homeTeamName": "Sevilla FC",
+    "id": 451584,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695236400000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/113.png",
+    "awayTeamName": "SSC Napoli",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5613.png",
+    "homeTeamName": "Sporting Clube de Braga",
+    "id": 451595,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695236400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/108.png",
+    "awayTeamName": "FC Internazionale Milano",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/92.svg",
+    "homeTeamName": "Real Sociedad de Fútbol",
+    "id": 451600,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695236400000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1877.png",
+    "awayTeamName": "FC Red Bull Salzburg",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1903.png",
+    "homeTeamName": "Sport Lisboa e Benfica",
+    "id": 451606,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695236400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/66.png",
+    "awayTeamName": "Manchester United FC",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5.svg",
+    "homeTeamName": "FC Bayern München",
+    "id": 451565,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695236400000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/674.png",
+    "awayTeamName": "PSV",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/57.png",
+    "homeTeamName": "Arsenal FC",
+    "id": 451573,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1695236400000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5613.png",
+    "awayTeamName": "Sporting Clube de Braga",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/28.svg",
+    "homeTeamName": "1. FC Union Berlin",
+    "id": 451587,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696351500000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/92.svg",
+    "awayTeamName": "Real Sociedad de Fútbol",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1877.png",
+    "homeTeamName": "FC Red Bull Salzburg",
+    "id": 451603,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696351500000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/86.png",
+    "awayTeamName": "Real Madrid CF",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/113.png",
+    "homeTeamName": "SSC Napoli",
+    "id": 451594,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696359600000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1903.png",
+    "awayTeamName": "Sport Lisboa e Benfica",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/108.png",
+    "homeTeamName": "FC Internazionale Milano",
+    "id": 451601,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696359600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5.svg",
+    "awayTeamName": "FC Bayern München",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1876.png",
+    "homeTeamName": "FC København",
+    "id": 451562,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696359600000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/610.png",
+    "awayTeamName": "Galatasaray SK",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/66.png",
+    "homeTeamName": "Manchester United FC",
+    "id": 451572,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696359600000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/57.png",
+    "awayTeamName": "Arsenal FC",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/546.png",
+    "homeTeamName": "Racing Club de Lens",
+    "id": 451576,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696359600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/559.svg",
+    "awayTeamName": "Sevilla FC",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/674.png",
+    "homeTeamName": "PSV",
+    "id": 451581,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696359600000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/675.png",
+    "awayTeamName": "Feyenoord Rotterdam",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/78.svg",
+    "homeTeamName": "Club Atlético de Madrid",
+    "id": 451611,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696437900000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1887.png",
+    "awayTeamName": "FK Shakhtar Donetsk",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1864.png",
+    "homeTeamName": "Royal Antwerp FC",
+    "id": 451655,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696437900000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/110.png",
+    "awayTeamName": "SS Lazio",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/732.png",
+    "homeTeamName": "Celtic FC",
+    "id": 451617,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696446000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/98.png",
+    "awayTeamName": "AC Milan",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/4.png",
+    "homeTeamName": "Borussia Dortmund",
+    "id": 451622,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696446000000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/524.png",
+    "awayTeamName": "Paris Saint-Germain FC",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/67.png",
+    "homeTeamName": "Newcastle United FC",
+    "id": 451631,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696446000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1871.png",
+    "awayTeamName": "BSC Young Boys",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/7283.png",
+    "homeTeamName": "FK Crvena Zvezda",
+    "id": 451634,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696446000000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/65.png",
+    "awayTeamName": "Manchester City FC",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/721.png",
+    "homeTeamName": "RB Leipzig",
+    "id": 451644,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696446000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/81.svg",
+    "awayTeamName": "FC Barcelona",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/503.png",
+    "homeTeamName": "FC Porto",
+    "id": 451646,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1696446000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1877.png",
+    "awayTeamName": "FC Red Bull Salzburg",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/108.png",
+    "homeTeamName": "FC Internazionale Milano",
+    "id": 451597,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698165900000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5.svg",
+    "awayTeamName": "FC Bayern München",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/610.png",
+    "homeTeamName": "Galatasaray SK",
+    "id": 451564,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698165900000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/113.png",
+    "awayTeamName": "SSC Napoli",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/28.svg",
+    "homeTeamName": "1. FC Union Berlin",
+    "id": 451589,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698174000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/86.png",
+    "awayTeamName": "Real Madrid CF",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5613.png",
+    "homeTeamName": "Sporting Clube de Braga",
+    "id": 451592,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698174000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/92.svg",
+    "awayTeamName": "Real Sociedad de Fútbol",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1903.png",
+    "homeTeamName": "Sport Lisboa e Benfica",
+    "id": 451608,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698174000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1876.png",
+    "awayTeamName": "FC København",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/66.png",
+    "homeTeamName": "Manchester United FC",
+    "id": 451570,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698174000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/57.png",
+    "awayTeamName": "Arsenal FC",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/559.svg",
+    "homeTeamName": "Sevilla FC",
+    "id": 451578,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698174000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/674.png",
+    "awayTeamName": "PSV",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/546.png",
+    "homeTeamName": "Racing Club de Lens",
+    "id": 451580,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698174000000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/110.png",
+    "awayTeamName": "SS Lazio",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/675.png",
+    "homeTeamName": "Feyenoord Rotterdam",
+    "id": 451619,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698252300000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1887.png",
+    "awayTeamName": "FK Shakhtar Donetsk",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/81.svg",
+    "homeTeamName": "FC Barcelona",
+    "id": 451649,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698252300000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/78.svg",
+    "awayTeamName": "Club Atlético de Madrid",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/732.png",
+    "homeTeamName": "Celtic FC",
+    "id": 451610,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698260400000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/98.png",
+    "awayTeamName": "AC Milan",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/524.png",
+    "homeTeamName": "Paris Saint-Germain FC",
+    "id": 451626,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698260400000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/4.png",
+    "awayTeamName": "Borussia Dortmund",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/67.png",
+    "homeTeamName": "Newcastle United FC",
+    "id": 451628,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698260400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/65.png",
+    "awayTeamName": "Manchester City FC",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1871.png",
+    "homeTeamName": "BSC Young Boys",
+    "id": 451635,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698260400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/7283.png",
+    "awayTeamName": "FK Crvena Zvezda",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/721.png",
+    "homeTeamName": "RB Leipzig",
+    "id": 451642,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698260400000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/503.png",
+    "awayTeamName": "FC Porto",
+    "fullTimeScore": {
+      "away": 4,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1864.png",
+    "homeTeamName": "Royal Antwerp FC",
+    "id": 451652,
+    "regularTimeScore": {
+      "away": 4,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1698260400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/67.png",
+    "awayTeamName": "Newcastle United FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/4.png",
+    "homeTeamName": "Borussia Dortmund",
+    "id": 451627,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699379100000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/81.svg",
+    "awayTeamName": "FC Barcelona",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1887.png",
+    "homeTeamName": "FK Shakhtar Donetsk",
+    "id": 451650,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699379100000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/732.png",
+    "awayTeamName": "Celtic FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 6,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/78.svg",
+    "homeTeamName": "Club Atlético de Madrid",
+    "id": 451609,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 6,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699387200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/675.png",
+    "awayTeamName": "Feyenoord Rotterdam",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/110.png",
+    "homeTeamName": "SS Lazio",
+    "id": 451620,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699387200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/524.png",
+    "awayTeamName": "Paris Saint-Germain FC",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/98.png",
+    "homeTeamName": "AC Milan",
+    "id": 451625,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699387200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1871.png",
+    "awayTeamName": "BSC Young Boys",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/65.png",
+    "homeTeamName": "Manchester City FC",
+    "id": 451636,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699387200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/721.png",
+    "awayTeamName": "RB Leipzig",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/7283.png",
+    "homeTeamName": "FK Crvena Zvezda",
+    "id": 451641,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699387200000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1864.png",
+    "awayTeamName": "Royal Antwerp FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/503.png",
+    "homeTeamName": "FC Porto",
+    "id": 451651,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699387200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/28.svg",
+    "awayTeamName": "1. FC Union Berlin",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/113.png",
+    "homeTeamName": "SSC Napoli",
+    "id": 451590,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699465500000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1903.png",
+    "awayTeamName": "Sport Lisboa e Benfica",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/92.svg",
+    "homeTeamName": "Real Sociedad de Fútbol",
+    "id": 451607,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699465500000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5613.png",
+    "awayTeamName": "Sporting Clube de Braga",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/86.png",
+    "homeTeamName": "Real Madrid CF",
+    "id": 451591,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699473600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/108.png",
+    "awayTeamName": "FC Internazionale Milano",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1877.png",
+    "homeTeamName": "FC Red Bull Salzburg",
+    "id": 451598,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699473600000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/610.png",
+    "awayTeamName": "Galatasaray SK",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5.svg",
+    "homeTeamName": "FC Bayern München",
+    "id": 451563,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699473600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/66.png",
+    "awayTeamName": "Manchester United FC",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1876.png",
+    "homeTeamName": "FC København",
+    "id": 451569,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699473600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/559.svg",
+    "awayTeamName": "Sevilla FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/57.png",
+    "homeTeamName": "Arsenal FC",
+    "id": 451577,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699473600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/546.png",
+    "awayTeamName": "Racing Club de Lens",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/674.png",
+    "homeTeamName": "PSV",
+    "id": 451579,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1699473600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/732.png",
+    "awayTeamName": "Celtic FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/110.png",
+    "homeTeamName": "SS Lazio",
+    "id": 451618,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701193500000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1864.png",
+    "awayTeamName": "Royal Antwerp FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1887.png",
+    "homeTeamName": "FK Shakhtar Donetsk",
+    "id": 451656,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701193500000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/78.svg",
+    "awayTeamName": "Club Atlético de Madrid",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/675.png",
+    "homeTeamName": "Feyenoord Rotterdam",
+    "id": 451612,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701201600000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/4.png",
+    "awayTeamName": "Borussia Dortmund",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/98.png",
+    "homeTeamName": "AC Milan",
+    "id": 451621,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701201600000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/67.png",
+    "awayTeamName": "Newcastle United FC",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/524.png",
+    "homeTeamName": "Paris Saint-Germain FC",
+    "id": 451632,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701201600000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/7283.png",
+    "awayTeamName": "FK Crvena Zvezda",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1871.png",
+    "homeTeamName": "BSC Young Boys",
+    "id": 451633,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701201600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/721.png",
+    "awayTeamName": "RB Leipzig",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/65.png",
+    "homeTeamName": "Manchester City FC",
+    "id": 451643,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701201600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/503.png",
+    "awayTeamName": "FC Porto",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/81.svg",
+    "homeTeamName": "FC Barcelona",
+    "id": 451645,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701201600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/66.png",
+    "awayTeamName": "Manchester United FC",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 3,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/610.png",
+    "homeTeamName": "Galatasaray SK",
+    "id": 451571,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 3,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701279900000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/674.png",
+    "awayTeamName": "PSV",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/559.svg",
+    "homeTeamName": "Sevilla FC",
+    "id": 451582,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701279900000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/28.svg",
+    "awayTeamName": "1. FC Union Berlin",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5613.png",
+    "homeTeamName": "Sporting Clube de Braga",
+    "id": 451588,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701288000000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/113.png",
+    "awayTeamName": "SSC Napoli",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/86.png",
+    "homeTeamName": "Real Madrid CF",
+    "id": 451593,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701288000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/108.png",
+    "awayTeamName": "FC Internazionale Milano",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 3,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1903.png",
+    "homeTeamName": "Sport Lisboa e Benfica",
+    "id": 451602,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 3,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701288000000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1877.png",
+    "awayTeamName": "FC Red Bull Salzburg",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/92.svg",
+    "homeTeamName": "Real Sociedad de Fútbol",
+    "id": 451604,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701288000000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1876.png",
+    "awayTeamName": "FC København",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5.svg",
+    "homeTeamName": "FC Bayern München",
+    "id": 451561,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701288000000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/546.png",
+    "awayTeamName": "Racing Club de Lens",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 6,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/57.png",
+    "homeTeamName": "Arsenal FC",
+    "id": 451575,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 6,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1701288000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/57.png",
+    "awayTeamName": "Arsenal FC",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/674.png",
+    "homeTeamName": "PSV",
+    "id": 451574,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702403100000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/559.svg",
+    "awayTeamName": "Sevilla FC",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/546.png",
+    "homeTeamName": "Racing Club de Lens",
+    "id": 451583,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702403100000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/86.png",
+    "awayTeamName": "Real Madrid CF",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/28.svg",
+    "homeTeamName": "1. FC Union Berlin",
+    "id": 451585,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702411200000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5613.png",
+    "awayTeamName": "Sporting Clube de Braga",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/113.png",
+    "homeTeamName": "SSC Napoli",
+    "id": 451596,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702411200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/92.svg",
+    "awayTeamName": "Real Sociedad de Fútbol",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/108.png",
+    "homeTeamName": "FC Internazionale Milano",
+    "id": 451599,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 0,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702411200000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1903.png",
+    "awayTeamName": "Sport Lisboa e Benfica",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1877.png",
+    "homeTeamName": "FC Red Bull Salzburg",
+    "id": 451605,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702411200000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5.svg",
+    "awayTeamName": "FC Bayern München",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/66.png",
+    "homeTeamName": "Manchester United FC",
+    "id": 451566,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702411200000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/610.png",
+    "awayTeamName": "Galatasaray SK",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1876.png",
+    "homeTeamName": "FC København",
+    "id": 451567,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702411200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1871.png",
+    "awayTeamName": "BSC Young Boys",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/721.png",
+    "homeTeamName": "RB Leipzig",
+    "id": 451638,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702489500000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/65.png",
+    "awayTeamName": "Manchester City FC",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/7283.png",
+    "homeTeamName": "FK Crvena Zvezda",
+    "id": 451639,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702489500000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/110.png",
+    "awayTeamName": "SS Lazio",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/78.svg",
+    "homeTeamName": "Club Atlético de Madrid",
+    "id": 451613,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702497600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/675.png",
+    "awayTeamName": "Feyenoord Rotterdam",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/732.png",
+    "homeTeamName": "Celtic FC",
+    "id": 451615,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702497600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/98.png",
+    "awayTeamName": "AC Milan",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/67.png",
+    "homeTeamName": "Newcastle United FC",
+    "id": 451624,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702497600000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/524.png",
+    "awayTeamName": "Paris Saint-Germain FC",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/4.png",
+    "homeTeamName": "Borussia Dortmund",
+    "id": 451629,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702497600000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/81.svg",
+    "awayTeamName": "FC Barcelona",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1864.png",
+    "homeTeamName": "Royal Antwerp FC",
+    "id": 451648,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702497600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1887.png",
+    "awayTeamName": "FK Shakhtar Donetsk",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 5,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/503.png",
+    "homeTeamName": "FC Porto",
+    "id": 451653,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 5,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "GROUP_STAGE",
+    "status": "FINISHED",
+    "timestamp": 1702497600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/65.png",
+    "awayTeamName": "Manchester City FC",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/1876.png",
+    "homeTeamName": "FC København",
+    "id": 451663,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1707854400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/86.png",
+    "awayTeamName": "Real Madrid CF",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/721.png",
+    "homeTeamName": "RB Leipzig",
+    "id": 451664,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1707854400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/92.svg",
+    "awayTeamName": "Real Sociedad de Fútbol",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/524.png",
+    "homeTeamName": "Paris Saint-Germain FC",
+    "id": 451659,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1707940800000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5.svg",
+    "awayTeamName": "FC Bayern München",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/110.png",
+    "homeTeamName": "SS Lazio",
+    "id": 451662,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1707940800000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/78.svg",
+    "awayTeamName": "Club Atlético de Madrid",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/108.png",
+    "homeTeamName": "FC Internazionale Milano",
+    "id": 451660,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1708459200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/4.png",
+    "awayTeamName": "Borussia Dortmund",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/674.png",
+    "homeTeamName": "PSV",
+    "id": 451661,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1708459200000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/57.png",
+    "awayTeamName": "Arsenal FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/503.png",
+    "homeTeamName": "FC Porto",
+    "id": 451657,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1708545600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/81.svg",
+    "awayTeamName": "FC Barcelona",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/113.png",
+    "homeTeamName": "SSC Napoli",
+    "id": 451658,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1708545600000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/524.png",
+    "awayTeamName": "Paris Saint-Germain FC",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/92.svg",
+    "homeTeamName": "Real Sociedad de Fútbol",
+    "id": 451667,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1709668800000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/110.png",
+    "awayTeamName": "SS Lazio",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5.svg",
+    "homeTeamName": "FC Bayern München",
+    "id": 451670,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1709668800000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/1876.png",
+    "awayTeamName": "FC København",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/65.png",
+    "homeTeamName": "Manchester City FC",
+    "id": 451671,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1709755200000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/721.png",
+    "awayTeamName": "RB Leipzig",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/86.png",
+    "homeTeamName": "Real Madrid CF",
+    "id": 451672,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1709755200000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/503.png",
+    "awayTeamName": "FC Porto",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 5,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/57.png",
+    "homeTeamName": "Arsenal FC",
+    "id": 451665,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1710273600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/113.png",
+    "awayTeamName": "SSC Napoli",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/81.svg",
+    "homeTeamName": "FC Barcelona",
+    "id": 451666,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 3,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1710273600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/108.png",
+    "awayTeamName": "FC Internazionale Milano",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 5,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/78.svg",
+    "homeTeamName": "Club Atlético de Madrid",
+    "id": 451668,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1710360000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/674.png",
+    "awayTeamName": "PSV",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/4.png",
+    "homeTeamName": "Borussia Dortmund",
+    "id": 451669,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "LAST_16",
+    "status": "FINISHED",
+    "timestamp": 1710360000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5.svg",
+    "awayTeamName": "FC Bayern München",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/57.png",
+    "homeTeamName": "Arsenal FC",
+    "id": 451673,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "stage": "QUARTER_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1712689200000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/65.png",
+    "awayTeamName": "Manchester City FC",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 3,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/86.png",
+    "homeTeamName": "Real Madrid CF",
+    "id": 451675,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 3,
+      "winner": "DRAW"
+    },
+    "stage": "QUARTER_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1712689200000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/4.png",
+    "awayTeamName": "Borussia Dortmund",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/78.svg",
+    "homeTeamName": "Club Atlético de Madrid",
+    "id": 451674,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "QUARTER_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1712775600000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/81.svg",
+    "awayTeamName": "FC Barcelona",
+    "fullTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/524.png",
+    "homeTeamName": "Paris Saint-Germain FC",
+    "id": 451676,
+    "regularTimeScore": {
+      "away": 3,
+      "home": 2,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "QUARTER_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1712775600000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/78.svg",
+    "awayTeamName": "Club Atlético de Madrid",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/4.png",
+    "homeTeamName": "Borussia Dortmund",
+    "id": 451678,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 4,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "QUARTER_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1713294000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/524.png",
+    "awayTeamName": "Paris Saint-Germain FC",
+    "fullTimeScore": {
+      "away": 4,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/81.svg",
+    "homeTeamName": "FC Barcelona",
+    "id": 451680,
+    "regularTimeScore": {
+      "away": 4,
+      "home": 1,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "QUARTER_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1713294000000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/57.png",
+    "awayTeamName": "Arsenal FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5.svg",
+    "homeTeamName": "FC Bayern München",
+    "id": 451677,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "QUARTER_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1713380400000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/86.png",
+    "awayTeamName": "Real Madrid CF",
+    "fullTimeScore": {
+      "away": 5,
+      "home": 4,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/65.png",
+    "homeTeamName": "Manchester City FC",
+    "id": 451679,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 1,
+      "winner": "DRAW"
+    },
+    "stage": "QUARTER_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1713380400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/86.png",
+    "awayTeamName": "Real Madrid CF",
+    "fullTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/5.svg",
+    "homeTeamName": "FC Bayern München",
+    "id": 451682,
+    "regularTimeScore": {
+      "away": 2,
+      "home": 2,
+      "winner": "DRAW"
+    },
+    "stage": "SEMI_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1714503600000,
+    "winner": "DRAW"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/524.png",
+    "awayTeamName": "Paris Saint-Germain FC",
+    "fullTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/4.png",
+    "homeTeamName": "Borussia Dortmund",
+    "id": 451681,
+    "regularTimeScore": {
+      "away": 0,
+      "home": 1,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "SEMI_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1714590000000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/4.png",
+    "awayTeamName": "Borussia Dortmund",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/524.png",
+    "homeTeamName": "Paris Saint-Germain FC",
+    "id": 451683,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 0,
+      "winner": "AWAY_TEAM"
+    },
+    "stage": "SEMI_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1715108400000,
+    "winner": "AWAY_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/5.svg",
+    "awayTeamName": "FC Bayern München",
+    "fullTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "homeTeamIcon": "https://crests.football-data.org/86.png",
+    "homeTeamName": "Real Madrid CF",
+    "id": 451684,
+    "regularTimeScore": {
+      "away": 1,
+      "home": 2,
+      "winner": "HOME_TEAM"
+    },
+    "stage": "SEMI_FINALS",
+    "status": "FINISHED",
+    "timestamp": 1715194800000,
+    "winner": "HOME_TEAM"
+  },
+  {
+    "awayTeamIcon": "https://crests.football-data.org/86.png",
+    "awayTeamName": "Real Madrid CF",
+    "homeTeamIcon": "https://crests.football-data.org/4.png",
+    "homeTeamName": "Borussia Dortmund",
+    "id": 451685,
+    "stage": "FINAL",
+    "status": "TIMED",
+    "timestamp": 1717268400000
+  }
+]

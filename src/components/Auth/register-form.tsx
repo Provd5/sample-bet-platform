@@ -15,7 +15,7 @@ import {
   registerSchema,
   type registerSchemaType,
 } from "~/lib/validatorSchemas/auth";
-import ROUTES from "~/utils/routes";
+import ROUTES from "~/constants/routes";
 
 import { Button } from "../ui/button";
 import {
@@ -75,6 +75,8 @@ export const RegisterForm: FC = ({}) => {
     },
   });
 
+  const { formState } = form;
+
   function onSubmit(values: registerSchemaType) {
     if (values.password !== values.repeat_password) {
       form.setError("repeat_password", {
@@ -85,7 +87,8 @@ export const RegisterForm: FC = ({}) => {
 
     createUserWithEmailAndPassword(auth, values.email, values.password)
       .then(async (userCredential) => {
-        await setDoc(doc(db, "users", userCredential.user.uid), {
+        const usersRef = doc(db, "users", userCredential.user.uid);
+        await setDoc(usersRef, {
           username: values.username,
           isActive: false,
         }),
@@ -142,7 +145,7 @@ export const RegisterForm: FC = ({}) => {
         ))}
         <Button type="submit">
           Stwórz konto
-          {form.formState.isSubmitting && (
+          {formState.isSubmitting && (
             <LoaderCircle className="ml-1 animate-spin size-4" />
           )}
         </Button>

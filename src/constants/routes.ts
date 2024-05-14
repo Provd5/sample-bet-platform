@@ -2,7 +2,7 @@ const ROUTES = {
   root: "/",
   register: "/sign-up",
   authCallback: "/auth/callback",
-  betting: "/betting",
+  games: "/games",
   results: "/results",
 };
 
