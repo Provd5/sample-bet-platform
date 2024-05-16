@@ -1,5 +1,32 @@
+type MatchStatus = (typeof MatchStatusArray)[number];
+export const MatchStatusArray = [
+  "TIMED",
+  "SCHEDULED",
+  "LIVE",
+  "IN_PLAY",
+  "PAUSED",
+  "FINISHED",
+  "POSTPONED",
+  "SUSPENDED",
+  "CANCELLED",
+] as const;
+
+type MatchStage = (typeof MatchStageArray)[number];
+export const MatchStageArray = [
+  "GROUP_STAGE",
+  "LAST_16",
+  "QUARTER_FINALS",
+  "SEMI_FINALS",
+  "FINAL",
+] as const;
+
+type MatchWinner = (typeof MatchWinnerArray)[number];
+export const MatchWinnerArray = ["HOME_TEAM", "AWAY_TEAM", "DRAW"] as const;
+
+export type constantsToTranslate = MatchStatus | MatchStage | MatchWinner;
+
 export interface GameInterface {
-  id: string;
+  id: string | number;
   awayTeamIcon: string;
   awayTeamName: string;
   homeTeamIcon: string;
@@ -7,30 +34,25 @@ export interface GameInterface {
   fullTimeScore?: {
     away: number;
     home: number;
-    winner: "HOME_TEAM" | "AWAY_TEAM" | "DRAW";
+    winner: MatchWinner;
   };
   regularTimeScore?: {
     away: number;
     home: number;
-    winner: "HOME_TEAM" | "AWAY_TEAM" | "DRAW";
+    winner: MatchWinner;
   };
-  status:
-    | "TIMED"
-    | "SCHEDULED"
-    | "LIVE"
-    | "IN_PLAY"
-    | "PAUSED"
-    | "FINISHED"
-    | "POSTPONED"
-    | "SUSPENDED"
-    | "CANCELLED";
-  stage: "GROUP_STAGE" | "LAST_16" | "QUARTER_FINALS" | "SEMI_FINALS" | "FINAL";
+  status: MatchStatus;
+  stage: MatchStage;
   timestamp: number;
 }
 
-export type constantsToTranslate =
-  | GameInterface["status"]
-  | GameInterface["stage"]
-  | "HOME_TEAM"
-  | "AWAY_TEAM"
-  | "DRAW";
+export interface BetInterface {
+  id: string;
+  username: string;
+  user_id: string;
+  game_id: GameInterface["id"];
+  away_goals: number;
+  home_goals: number;
+  winner: MatchWinner | "";
+  game_stage: MatchStage;
+}

@@ -25,7 +25,7 @@ export const GameTeam: FC<GameTeamProps> = ({
         !secondary && teamSide === "AWAY_TEAM" && "flex-row text-start"
       )}
     >
-      <Image width={30} height={30} src={teamIcon} alt={`${teamName}-icon`} />
+      <Image width={30} height={30} src={teamIcon} alt={`${teamName} icon`} />
       <div className="flex flex-col">
         <h2
           className={cn(

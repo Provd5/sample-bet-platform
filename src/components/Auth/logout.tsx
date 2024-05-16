@@ -19,7 +19,7 @@ export const Logout: FC = ({}) => {
         toast({
           title: "Jeszcze sekundka ⌛",
           description: "Trwa wylogowywanie...",
-          duration: 1500,
+          duration: 3000,
         }),
         logOut()
       )}

@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "Betowanie",
-    template: "%s | Betowanie",
+    template: "%s | 💸 Betowanie",
   },
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" suppressHydrationWarning>
-      <body className={cn(inter.className, "flex flex-col")}>
+      <body className={cn(inter.className, "flex flex-col overflow-x-hidden")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

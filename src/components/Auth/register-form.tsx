@@ -8,6 +8,9 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { LoaderCircle } from "lucide-react";
 
+import { ERROR_ENUM } from "~/types/errors";
+
+import ROUTES from "~/constants/routes";
 import { createSession } from "~/lib/auth/session";
 import { errorHandler } from "~/lib/error-handler";
 import { auth, db } from "~/lib/firebase";
@@ -15,7 +18,6 @@ import {
   registerSchema,
   type registerSchemaType,
 } from "~/lib/validatorSchemas/auth";
-import ROUTES from "~/constants/routes";
 
 import { Button } from "../ui/button";
 import {
@@ -97,14 +99,14 @@ export const RegisterForm: FC = ({}) => {
       .then(() => router.replace(ROUTES.authCallback))
       .catch((error: unknown) => {
         toast({
-          title: "Coś poszło nie tak! 😥",
+          title: ERROR_ENUM.SOMETHING_WENT_WRONG,
           description: errorHandler(error),
           variant: "destructive",
         });
       })
       .catch((error: unknown) => {
         toast({
-          title: "Coś poszło nie tak! 😥",
+          title: ERROR_ENUM.SOMETHING_WENT_WRONG,
           description: errorHandler(error),
           variant: "destructive",
         });

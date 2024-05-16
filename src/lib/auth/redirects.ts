@@ -10,20 +10,16 @@ export const redirectIfIsSession = async () => {
   if (!!session) redirect(ROUTES.games);
 };
 
-export const redirectIfSessionUserIsNotActive = async () => {
+export const redirectIfSessionUser = async (redirectIfIsActive: boolean) => {
   const session = await readSessionId();
   if (!session) redirect(ROUTES.root);
 
   const user = await getUser(session.userId);
-  if (!user?.isActive) {
+
+  if (redirectIfIsActive && !!user?.isActive) {
+    redirect(ROUTES.games);
+  }
+  if (!redirectIfIsActive && !user?.isActive) {
     redirect(ROUTES.authCallback);
   }
-};
-
-export const redirectIfSessionUserIsActive = async () => {
-  const session = await readSessionId();
-  if (!session) redirect(ROUTES.root);
-
-  const user = await getUser(session.userId);
-  if (!!user?.isActive) redirect(ROUTES.games);
 };

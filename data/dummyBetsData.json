@@ -1,0 +1,47 @@
+[
+  {
+    "username": "test1",
+    "user_id": "wp8xQu0GlHcS96aqz1UcacLp1792",
+    "game_id": 451685,
+    "away_goals": 4,
+    "home_goals": 4,
+    "winner": "",
+    "game_stage": "FINALS"
+  },
+  {
+    "username": "test1",
+    "user_id": "wp8xQu0GlHcS96aqz1UcacLp1792",
+    "game_id": 451684,
+    "away_goals": 1,
+    "home_goals": 2,
+    "winner": "HOME_TEAM",
+    "game_stage": "SEMI_FINALS"
+  },
+  {
+    "username": "test1",
+    "user_id": "wp8xQu0GlHcS96aqz1UcacLp1792",
+    "game_id": 451683,
+    "away_goals": 1,
+    "home_goals": 1,
+    "winner": "",
+    "game_stage": "SEMI_FINALS"
+  },
+  {
+    "username": "test2",
+    "user_id": "maniek",
+    "game_id": 451683,
+    "away_goals": 1,
+    "home_goals": 0,
+    "winner": "AWAY_TEAM",
+    "game_stage": "SEMI_FINALS"
+  },
+  {
+    "username": "test2",
+    "user_id": "maniek",
+    "game_id": 451625,
+    "away_goals": 1,
+    "home_goals": 2,
+    "winner": "HOME_TEAM",
+    "game_stage": "SEMI_FINALS"
+  }
+]

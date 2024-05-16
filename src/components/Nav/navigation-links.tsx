@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import { Award, Goal } from "lucide-react";
 
-import { readSessionId } from "~/lib/auth/session";
 import ROUTES from "~/constants/routes";
+import { readSessionId } from "~/lib/auth/session";
 
 import { Logout } from "../Auth/logout";
 import { NavigationLink } from "./navigation-link";

@@ -1,9 +1,19 @@
 import { promises as fs } from "fs";
 
-import { type GameInterface } from "~/types/games";
+import { type BetInterface, type GameInterface } from "~/types/games";
 
-export const fetchData = async (): Promise<GameInterface[]> => {
+export const fetchGames = async (): Promise<GameInterface[]> => {
   const filePath = `/data/dummyGamesData.json`;
   const file = await fs.readFile(process.cwd() + filePath, "utf8");
-  return JSON.parse(file) as GameInterface[];
+  const data = JSON.parse(file) as GameInterface[];
+
+  return data.reverse();
+};
+
+export const fetchBets = async (): Promise<BetInterface[]> => {
+  const filePath = `/data/dummyBetsData.json`;
+  const file = await fs.readFile(process.cwd() + filePath, "utf8");
+  const data = JSON.parse(file) as BetInterface[];
+
+  return data;
 };

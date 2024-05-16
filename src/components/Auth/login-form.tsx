@@ -7,11 +7,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { LoaderCircle } from "lucide-react";
 
+import ROUTES from "~/constants/routes";
 import { createSession } from "~/lib/auth/session";
 import { errorHandler } from "~/lib/error-handler";
 import { auth } from "~/lib/firebase";
 import { loginSchema, type loginSchemaType } from "~/lib/validatorSchemas/auth";
-import ROUTES from "~/constants/routes";
 
 import { Button } from "../ui/button";
 import {

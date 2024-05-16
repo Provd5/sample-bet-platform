@@ -1,15 +1,10 @@
 import type { FC } from "react";
 
-import { type GameInterface } from "~/types/games";
+import { type BetInterface, type GameInterface } from "~/types/games";
 
 import {
   AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
   AlertDialogTrigger,
 } from "~/components/ui/alert-dialog";
 
@@ -18,23 +13,19 @@ import { BetGame } from "./bet-game";
 
 interface BetModalProps {
   game: GameInterface;
+  userBets: BetInterface[];
 }
 
-export const BetModal: FC<BetModalProps> = ({ game }) => {
+export const BetModal: FC<BetModalProps> = ({ game, userBets }) => {
+  const userBet = userBets.find((bet) => bet.game_id === game.id);
+
   return (
     <AlertDialog>
       <AlertDialogTrigger className="w-full">
-        <GameCard game={game} />
+        <GameCard game={game} userBet={userBet} />
       </AlertDialogTrigger>
       <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>Obstaw ten mecz</AlertDialogTitle>
-          <BetGame game={game} />
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Anuluj</AlertDialogCancel>
-          <AlertDialogAction>Postaw</AlertDialogAction>
-        </AlertDialogFooter>
+        <BetGame game={game} userBet={userBet} />
       </AlertDialogContent>
     </AlertDialog>
   );
