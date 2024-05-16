@@ -24,7 +24,7 @@ export default async function AuthCallbackPage() {
             </h1>
             <p className="text-sm mt-0.5">
               Jeżeli Flax dopiero co aktywował konto to możliwe, że bedziesz
-              musiał poczekać 10 minut.
+              musiał poczekać pare minut.
             </p>
           </div>
           <RefreshButton />

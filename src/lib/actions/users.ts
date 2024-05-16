@@ -35,7 +35,7 @@ export const getUser = cache(
   ["cache-getUser"],
   {
     tags: ["cache-getUser"],
-    revalidate: 600, // revalidate every 10 minutes
+    revalidate: 120, // revalidate every 2 minutes
   }
 );
 
@@ -56,6 +56,6 @@ export const getAllUsers = cache(
   ["cache-getAllUsers"],
   {
     tags: ["cache-getAllUsers"],
-    revalidate: 600, // revalidate every 10 minutes
+    revalidate: 120, // revalidate every 2 minutes
   }
 );
