@@ -32,7 +32,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavigationBar />
-          <main className="h-full">{children}</main>
+          <main className="h-full relative">{children}</main>
 
           <Toaster />
         </ThemeProvider>
