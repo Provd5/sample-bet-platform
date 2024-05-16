@@ -23,7 +23,6 @@ export async function logOut() {
 export const getUser = cache(
   async (userId: string): Promise<UserInterface | null> => {
     try {
-      console.log("getUser @@@@@@5", new Date());
       const usersRef = doc(db, "users", userId);
       const user = await getDoc(usersRef);
       if (!user.exists()) return null;
@@ -43,8 +42,6 @@ export const getUser = cache(
 export const getAllUsers = cache(
   async (): Promise<UserInterface[]> => {
     try {
-      console.log("getAllUsers @@@@@@3", new Date());
-
       const usersRef = collection(db, "users");
       const users = await getDocs(usersRef);
 

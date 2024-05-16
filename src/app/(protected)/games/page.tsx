@@ -14,7 +14,7 @@ export default function GamesPage() {
     <div>
       <Suspense
         key={"games-table-suspense"}
-        fallback={<TableLoader height={82} innerHeight={54} />}
+        fallback={<TableLoader variant="games" />}
       >
         <GamesTable />
       </Suspense>

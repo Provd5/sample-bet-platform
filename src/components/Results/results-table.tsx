@@ -10,9 +10,7 @@ import resultsCalculator from "./results-calculator";
 
 export const ResultsTable: FC = async ({}) => {
   const [games, bets, session] = await Promise.all([
-    // fetchGames(),
     getAllGames(),
-    // fetchBets(),
     getAllUsersBets(),
     readSessionId(),
   ]);

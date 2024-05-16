@@ -34,7 +34,6 @@ import { getUser } from "./users";
 export const getAllGames = cache(
   async (): Promise<GameInterface[]> => {
     try {
-      console.log("getAllGames @@@@@@1", new Date());
       const dbRef = ref(realdb);
       const queryRef = query(
         child(dbRef, `matches/`),
@@ -67,8 +66,6 @@ export const getUserBets = async (): Promise<BetInterface[]> => {
 
     const fetchFn = cache(
       async (userId: string) => {
-        console.log("getUserBets @@@@@@2", new Date());
-
         const betsRef = collection(db, "bets");
         const q = firestoreQuery(betsRef, where("user_id", "==", userId));
         const bets = await getDocs(q);
@@ -94,8 +91,6 @@ export const getUserBets = async (): Promise<BetInterface[]> => {
 export const getAllUsersBets = cache(
   async (): Promise<BetInterface[]> => {
     try {
-      console.log("getAllUsersBets @@@@@@4", new Date());
-
       const betsRef = collection(db, "bets");
       const bets = await getDocs(betsRef);
 

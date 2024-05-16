@@ -14,9 +14,7 @@ export default function ResultsPage() {
     <div>
       <Suspense
         key={"results-table-suspense"}
-        fallback={
-          <TableLoader className="mt-[36px]" height={77} innerHeight={56} />
-        }
+        fallback={<TableLoader variant="results" />}
       >
         <ResultsTable />
       </Suspense>

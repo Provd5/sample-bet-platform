@@ -6,11 +6,7 @@ import { DataTable } from "../data-table";
 import { BetModal } from "./Game/Bet/bet-modal";
 
 export const GamesTable: FC = async ({}) => {
-  const [games, userBets] = await Promise.all([
-    // fetchGames(),
-    getAllGames(),
-    getUserBets(),
-  ]);
+  const [games, userBets] = await Promise.all([getAllGames(), getUserBets()]);
 
   return (
     <DataTable isData={!!games && !!userBets}>
