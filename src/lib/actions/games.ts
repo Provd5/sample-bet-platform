@@ -55,7 +55,7 @@ export const getAllGames = cache(
   ["cache-getAllGames"],
   {
     tags: ["cache-getAllGames"],
-    revalidate: 600, // revalidate every 10 minutes
+    revalidate: 120, // revalidate every 2 minutes
   }
 );
 
@@ -105,7 +105,7 @@ export const getAllUsersBets = cache(
   ["cache-getAllUsersBets"],
   {
     tags: ["cache-getAllUsersBets"],
-    revalidate: 600, // revalidate every 10 minutes
+    revalidate: 120, // revalidate every 2 minutes
   }
 );
 
