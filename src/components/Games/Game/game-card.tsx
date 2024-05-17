@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { CircleCheckBig } from "lucide-react";
 
-import { type BetInterface, type GameInterface } from "~/types/games";
+import { type GameInterface } from "~/types/games";
 
 import { cn, translateConstantsToPolish } from "~/lib/utils";
 
@@ -10,10 +10,10 @@ import { GameTeam } from "./game-team";
 
 interface GameCardProps {
   game: GameInterface;
-  userBet: BetInterface | undefined;
+  isSessionBet: boolean;
 }
 
-export const GameCard: FC<GameCardProps> = ({ game, userBet }) => {
+export const GameCard: FC<GameCardProps> = ({ game, isSessionBet }) => {
   return (
     <div className="flex w-full justify-center px-2 pt-3 pb-4 hover:bg-gray-500/10 cursor-pointer hover:scale-105 transition-transform">
       <div className="flex items-center gap-3 md:gap-6 flex-col md:flex-row">
@@ -54,7 +54,7 @@ export const GameCard: FC<GameCardProps> = ({ game, userBet }) => {
             >
               {translateConstantsToPolish(game.stage)}
             </p>
-            {!!userBet && (
+            {isSessionBet && (
               <p className="flex gap-1 items-center text-sm -mt-1.5 md:-mt-0">
                 Obstawiono! <CircleCheckBig className="size-4 shrink-0" />
               </p>

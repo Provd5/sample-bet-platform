@@ -4,6 +4,7 @@ import { type FC, useState } from "react";
 import { useRouter } from "next/navigation";
 import { LoaderCircle, RotateCw } from "lucide-react";
 
+import { updateSession } from "~/lib/auth/session";
 import { cn } from "~/lib/utils";
 
 import { Button } from "./ui/button";
@@ -28,7 +29,8 @@ export const RefreshButton: FC<DefaultRefreshButton | CustomRefreshButton> = ({
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const refresh = () => {
+  const refresh = async () => {
+    await updateSession();
     setIsLoading(true);
     router.refresh();
     setTimeout(() => {

@@ -27,18 +27,13 @@ export const GameTeam: FC<GameTeamProps> = ({
     >
       <Image width={30} height={30} src={teamIcon} alt={`${teamName} icon`} />
       <div className="flex flex-col">
-        <h2
-          className={cn(
-            "-mb-0.5 text-sm text-gray-500",
-            winner === teamSide && "text-green-600"
-          )}
-        >
+        <h2 className="-mb-0.5 text-sm text-gray-500">
           {translateConstantsToPolish(teamSide)}
         </h2>
         <h1
           className={cn(
             "leading-none sm:w-48",
-            secondary ? "w-full" : "w-24",
+            secondary ? "w-full line-clamp-1" : "w-24",
             winner === teamSide && "text-green-600"
           )}
         >

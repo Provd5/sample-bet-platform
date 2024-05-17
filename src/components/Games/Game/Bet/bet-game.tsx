@@ -27,10 +27,10 @@ import { BetTeam } from "./bet-team";
 
 interface BetGameProps {
   game: GameInterface;
-  userBet: BetInterface | undefined;
+  sessionBet: BetInterface | undefined;
 }
 
-export const BetGame: FC<BetGameProps> = ({ game, userBet }) => {
+export const BetGame: FC<BetGameProps> = ({ game, sessionBet }) => {
   const { toast } = useToast();
   const isFinished = Date.now() > game.timestamp;
 
@@ -43,9 +43,9 @@ export const BetGame: FC<BetGameProps> = ({ game, userBet }) => {
   } = useForm<betSchemaType>({
     resolver: zodResolver(betSchema),
     defaultValues: {
-      home: userBet?.home_goals || 0,
-      away: userBet?.away_goals || 0,
-      winner: userBet?.winner || "",
+      home: sessionBet?.home_goals || 0,
+      away: sessionBet?.away_goals || 0,
+      winner: sessionBet?.winner || "",
     },
   });
 
@@ -90,8 +90,8 @@ export const BetGame: FC<BetGameProps> = ({ game, userBet }) => {
             awayTeamName={game.awayTeamName}
             awayTeamIcon={game.awayTeamIcon}
             userData={{
-              away_goals: userBet?.away_goals || 0,
-              home_goals: userBet?.home_goals || 0,
+              away_goals: sessionBet?.away_goals || 0,
+              home_goals: sessionBet?.home_goals || 0,
             }}
           />
           <Separator className="sm:hidden" />
@@ -103,7 +103,7 @@ export const BetGame: FC<BetGameProps> = ({ game, userBet }) => {
             awayTeamName={game.awayTeamName}
             awayTeamIcon={game.awayTeamIcon}
             userData={{
-              winner: userBet?.winner || "",
+              winner: sessionBet?.winner || "",
             }}
           />
         </div>
