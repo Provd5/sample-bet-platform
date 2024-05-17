@@ -23,7 +23,7 @@ export const ResultsTable: FC = async ({}) => {
         <TableHeader />
         {results.map((result, index) => (
           <ResultCard
-            key={`ResultCard-${result.user_id}`}
+            key={`ResultCard-results-${result.user_id}`}
             sessionId={session?.userId}
             result={result}
             place={index + 1}

@@ -19,6 +19,8 @@ export const ResultCard: FC<ResultCardProps> = ({
   result,
   place,
 }) => {
+  const sessionResult = sessionId === result.user_id;
+
   const medal =
     (place === 1 && "🥇") ||
     (place === 2 && "🥈") ||
@@ -28,12 +30,7 @@ export const ResultCard: FC<ResultCardProps> = ({
   return (
     <div className="flex w-full justify-center px-2 pt-2 pb-3 hover:bg-gray-500/10">
       <div className="flex flex-col gap-2 items-center w-full max-w-xl">
-        <h1
-          className={cn(
-            "self-end pr-6",
-            sessionId === result.user_id && "text-blue-500"
-          )}
-        >
+        <h1 className={cn("self-end pr-6", sessionResult && "text-blue-500")}>
           {result.username}
           {medal && <span className="ml-1">{medal}</span>}
         </h1>

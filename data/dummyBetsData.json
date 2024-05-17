@@ -5,7 +5,7 @@
     "game_id": 451685,
     "away_goals": 4,
     "home_goals": 4,
-    "winner": "",
+    "winner": "DRAW",
     "game_stage": "FINALS"
   },
   {
@@ -27,21 +27,219 @@
     "game_stage": "SEMI_FINALS"
   },
   {
-    "username": "test2",
-    "user_id": "maniek",
-    "game_id": 451683,
-    "away_goals": 1,
+    "username": "GameGuru22",
+    "user_id": "11",
+    "game_id": 451624,
+    "away_goals": 3,
+    "home_goals": 1,
+    "winner": "AWAY_TEAM",
+    "game_stage": "GROUP_STAGE"
+  },
+  {
+    "username": "SportsSavvy",
+    "user_id": "7",
+    "game_id": 451623,
+    "away_goals": 0,
     "home_goals": 0,
+    "winner": "DRAW",
+    "game_stage": "QUARTER_FINALS"
+  },
+  {
+    "username": "FantasyFan42",
+    "user_id": "9",
+    "game_id": 451624,
+    "away_goals": 2,
+    "home_goals": 4,
+    "winner": "HOME_TEAM",
+    "game_stage": "FINAL"
+  },
+  {
+    "username": "ChampionChaser",
+    "user_id": "3",
+    "game_id": 451624,
+    "away_goals": 1,
+    "home_goals": 1,
+    "winner": "DRAW",
+    "game_stage": "SEMI_FINALS"
+  },
+  {
+    "username": "GoalGetter99",
+    "user_id": "2",
+    "game_id": 451623,
+    "away_goals": 3,
+    "home_goals": 2,
+    "winner": "AWAY_TEAM",
+    "game_stage": "GROUP_STAGE"
+  },
+  {
+    "username": "SoccerSensei",
+    "user_id": "15",
+    "game_id": 451624,
+    "away_goals": 2,
+    "home_goals": 3,
+    "winner": "HOME_TEAM",
+    "game_stage": "QUARTER_FINALS"
+  },
+  {
+    "username": "FootballFanatic",
+    "user_id": "8",
+    "game_id": 451623,
+    "away_goals": 1,
+    "home_goals": 1,
+    "winner": "DRAW",
+    "game_stage": "GROUP_STAGE"
+  },
+  {
+    "username": "ChampionshipChase",
+    "user_id": "12",
+    "game_id": 451624,
+    "away_goals": 4,
+    "home_goals": 2,
     "winner": "AWAY_TEAM",
     "game_stage": "SEMI_FINALS"
   },
   {
-    "username": "test2",
-    "user_id": "maniek",
-    "game_id": 451625,
+    "username": "TrophyTaker",
+    "user_id": "6",
+    "game_id": 451623,
+    "away_goals": 0,
+    "home_goals": 2,
+    "winner": "HOME_TEAM",
+    "game_stage": "FINAL"
+  },
+  {
+    "username": "LeagueLegend",
+    "user_id": "10",
+    "game_id": 451624,
+    "away_goals": 3,
+    "home_goals": 3,
+    "winner": "DRAW",
+    "game_stage": "GROUP_STAGE"
+  },
+  {
+    "username": "GoalGetter2000",
+    "user_id": "14",
+    "game_id": 451624,
+    "away_goals": 2,
+    "home_goals": 1,
+    "winner": "AWAY_TEAM",
+    "game_stage": "QUARTER_FINALS"
+  },
+  {
+    "username": "SportsSpectator",
+    "user_id": "5",
+    "game_id": 451623,
     "away_goals": 1,
     "home_goals": 2,
     "winner": "HOME_TEAM",
+    "game_stage": "SEMI_FINALS"
+  },
+  {
+    "username": "FantasyFrenzy",
+    "user_id": "16",
+    "game_id": 451624,
+    "away_goals": 4,
+    "home_goals": 4,
+    "winner": "DRAW",
+    "game_stage": "GROUP_STAGE"
+  },
+  {
+    "username": "ChampionshipChallenger",
+    "user_id": "13",
+    "game_id": 451624,
+    "away_goals": 3,
+    "home_goals": 2,
+    "winner": "AWAY_TEAM",
+    "game_stage": "FINAL"
+  },
+  {
+    "username": "SoccerShowdown",
+    "user_id": "9",
+    "game_id": 451623,
+    "away_goals": 2,
+    "home_goals": 3,
+    "winner": "HOME_TEAM",
+    "game_stage": "QUARTER_FINALS"
+  },
+  {
+    "username": "TrophyTitan",
+    "user_id": "11",
+    "game_id": 451624,
+    "away_goals": 1,
+    "home_goals": 1,
+    "winner": "DRAW",
+    "game_stage": "SEMI_FINALS"
+  },
+  {
+    "username": "LeagueLeader",
+    "user_id": "7",
+    "game_id": 451623,
+    "away_goals": 4,
+    "home_goals": 1,
+    "winner": "AWAY_TEAM",
+    "game_stage": "GROUP_STAGE"
+  },
+  {
+    "username": "GoalGetter3000",
+    "user_id": "4",
+    "game_id": 451624,
+    "away_goals": 2,
+    "home_goals": 2,
+    "winner": "DRAW",
+    "game_stage": "FINAL"
+  },
+  {
+    "username": "SportsSensation",
+    "user_id": "17",
+    "game_id": 451624,
+    "away_goals": 3,
+    "home_goals": 4,
+    "winner": "HOME_TEAM",
+    "game_stage": "QUARTER_FINALS"
+  },
+  {
+    "username": "FantasyFever",
+    "user_id": "18",
+    "game_id": 451624,
+    "away_goals": 1,
+    "home_goals": 3,
+    "winner": "HOME_TEAM",
+    "game_stage": "SEMI_FINALS"
+  },
+  {
+    "username": "ChampionshipChase2",
+    "user_id": "19",
+    "game_id": 451624,
+    "away_goals": 2,
+    "home_goals": 2,
+    "winner": "DRAW",
+    "game_stage": "GROUP_STAGE"
+  },
+  {
+    "username": "TrophyTaker2",
+    "user_id": "20",
+    "game_id": 451624,
+    "away_goals": 4,
+    "home_goals": 3,
+    "winner": "AWAY_TEAM",
+    "game_stage": "FINAL"
+  },
+  {
+    "username": "LeagueLegend2",
+    "user_id": "21",
+    "game_id": 451623,
+    "away_goals": 1,
+    "home_goals": 2,
+    "winner": "HOME_TEAM",
+    "game_stage": "QUARTER_FINALS"
+  },
+  {
+    "username": "GoalGetter4000",
+    "user_id": "22",
+    "game_id": 451624,
+    "away_goals": 3,
+    "home_goals": 3,
+    "winner": "DRAW",
     "game_stage": "SEMI_FINALS"
   }
 ]

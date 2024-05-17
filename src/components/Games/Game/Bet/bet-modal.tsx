@@ -10,22 +10,28 @@ import {
 
 import { GameCard } from "../game-card";
 import { BetGame } from "./bet-game";
+import { BetUsers } from "./bet-users";
 
 interface BetModalProps {
+  sessionBet: BetInterface | undefined;
   game: GameInterface;
-  userBets: BetInterface[];
+  bets: BetInterface[];
 }
 
-export const BetModal: FC<BetModalProps> = ({ game, userBets }) => {
-  const userBet = userBets.find((bet) => bet.game_id === game.id);
+export const BetModal: FC<BetModalProps> = ({ sessionBet, game, bets }) => {
+  const isFinished = game.status === "FINISHED";
 
   return (
     <AlertDialog>
       <AlertDialogTrigger className="w-full">
-        <GameCard game={game} userBet={userBet} />
+        <GameCard game={game} isSessionBet={!!sessionBet} />
       </AlertDialogTrigger>
       <AlertDialogContent>
-        <BetGame game={game} userBet={userBet} />
+        {isFinished ? (
+          <BetUsers game={game} bets={bets} />
+        ) : (
+          <BetGame game={game} sessionBet={sessionBet} />
+        )}
       </AlertDialogContent>
     </AlertDialog>
   );

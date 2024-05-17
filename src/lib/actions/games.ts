@@ -59,7 +59,7 @@ export const getAllGames = cache(
   }
 );
 
-export const getUserBets = async (): Promise<BetInterface[]> => {
+export const getSessionBets = async (): Promise<BetInterface[]> => {
   try {
     const session = await readSessionId();
     if (!session) return [];
@@ -75,9 +75,9 @@ export const getUserBets = async (): Promise<BetInterface[]> => {
         const betsArray = bets.docs.map((doc) => doc.data());
         return betsArray as BetInterface[];
       },
-      ["cache-getUserBets"],
+      ["cache-getSessionBets"],
       {
-        tags: ["cache-getUserBets"],
+        tags: ["cache-getSessionBets"],
       }
     );
 
@@ -146,7 +146,7 @@ export const betGame = async (
       game_stage: validGameValues.stage,
     });
 
-    revalidateTag("cache-getUserBets");
+    revalidateTag("cache-getSessionBets");
     return { success: true };
   } catch (e) {
     throw new Error(errorHandler(e));
