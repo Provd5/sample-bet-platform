@@ -21,7 +21,7 @@ export const MatchStageArray = [
   "FINAL",
 ] as const;
 
-type MatchWinner = (typeof MatchWinnerArray)[number];
+export type MatchWinner = (typeof MatchWinnerArray)[number];
 export const MatchWinnerArray = ["HOME_TEAM", "AWAY_TEAM", "DRAW"] as const;
 
 export type constantsToTranslate = MatchStatus | MatchStage | MatchWinner;

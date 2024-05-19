@@ -3,7 +3,7 @@ import { format } from "date-fns";
 import { pl } from "date-fns/locale";
 import { twMerge } from "tailwind-merge";
 
-import { type constantsToTranslate } from "~/types/games";
+import { type constantsToTranslate, type MatchWinner, type GameInterface } from "~/types/games";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -11,6 +11,19 @@ export function cn(...inputs: ClassValue[]) {
 
 export function dateFormat(timestamp: number): string {
   return format(new Date(timestamp), "EEEE HH:mm | dd/MM/yyyy", { locale: pl });
+}
+
+export function getMatchWinnerName(
+  matchWinner: MatchWinner, game: GameInterface
+): string {
+  switch (matchWinner) {
+    case "AWAY_TEAM":
+      return game.awayTeamName;
+    case "HOME_TEAM":
+      return game.homeTeamName;
+    default:
+      return translateConstantsToPolish(matchWinner);
+  }
 }
 
 export function translateConstantsToPolish(

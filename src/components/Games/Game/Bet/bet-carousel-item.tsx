@@ -3,7 +3,7 @@ import type { FC } from "react";
 import { type BetInterface, type GameInterface } from "~/types/games";
 
 import { CarouselItem } from "~/components/ui/carousel";
-import { translateConstantsToPolish } from "~/lib/utils";
+import { getMatchWinnerName } from "~/lib/utils";
 
 interface BetCarouselItemProps {
   game: GameInterface;
@@ -14,8 +14,9 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
   game,
   userBet,
 }) => {
-  const homeGoalsHit = game.regularTimeScore?.home === userBet.home_goals;
-  const awayGoalsHit = game.regularTimeScore?.away === userBet.away_goals;
+  const accurateScoreHit =
+    game.regularTimeScore?.home === userBet.home_goals &&
+    game.regularTimeScore?.away === userBet.away_goals;
   const winnerHit = game.regularTimeScore?.winner === userBet.winner;
 
   return (
@@ -24,25 +25,17 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
         <h1 className="truncate max-w-40">{userBet.username}</h1>
         <div className="flex flex-col text-sm">
           <p className="text-gray-500">
-            Gole gospodarzy:{" "}
+            Wynik:{" "}
             <span
-              className={homeGoalsHit ? "text-green-600" : "text-destructive"}
+              className={accurateScoreHit ? "text-green-600" : "text-destructive"}
             >
-              {userBet.home_goals}
-            </span>
-          </p>
-          <p className="text-gray-500">
-            Gole gości:{" "}
-            <span
-              className={awayGoalsHit ? "text-green-600" : "text-destructive"}
-            >
-              {userBet.away_goals}
+              {userBet.home_goals}-{userBet.away_goals}
             </span>
           </p>
           <p className="text-gray-500">
             Zwycięzca:{" "}
             <span className={winnerHit ? "text-green-600" : "text-destructive"}>
-              {translateConstantsToPolish(userBet.winner)}
+              {getMatchWinnerName(userBet.winner, game)}
             </span>
           </p>
         </div>
