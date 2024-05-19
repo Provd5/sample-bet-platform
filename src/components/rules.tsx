@@ -15,16 +15,13 @@ import { Button } from "./ui/button";
 
 const rules = [
   "Wpisowe 30 zł na nagrodę dla pierwszych trzech miejsc.",
-  "Za poprawne wytypowanie goli jednej ze stron: +0.5pkt.",
   "Za poprawne wytypowanie zwycięzcy: +1pkt.",
   "Za poprawne wytypowanie dokładnego wyniku: +2pkt.",
-  "Za poprawne wytypowanie dokładnego wyniku i zwycięzcy: +3pkt.",
-  "Przyznane punkty za mecz finałowy mnożone są x3, za mecze w półfinałach x2.5, w ćwierćfinałach x2, w 1/8 x1.5.",
   "Dokładny wynik można postawić niezależnie na kogo obstawiło się zwycięzce.",
   "Wygrywa osoba która zgarnie najwięcej punktów, w przypadku remisu rozstrzyga najwięcej trafień dokładnych wyników.",
 ];
 
-export const Rules: FC = ({}) => {
+export const Rules: FC = ({ }) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
