@@ -33,6 +33,17 @@ import { getUser } from "./users";
 
 export const getAllGames = cache(
   async (): Promise<GameInterface[]> => {
+    const gameRequiredFields: Partial<keyof GameInterface>[] = [
+      "id",
+      "awayTeamIcon",
+      "awayTeamName",
+      "homeTeamIcon",
+      "homeTeamName",
+      "status",
+      "stage",
+      "timestamp",
+    ] as const;
+
     try {
       const dbRef = ref(realtimeDb);
       const queryRef = query(
@@ -44,18 +55,27 @@ export const getAllGames = cache(
 
       if (!games.exists()) return [];
       const snapshotValue: unknown = games.val();
+
       const isArray = snapshotValue instanceof Array;
-      const isObject = typeof snapshotValue === "object";
+      const isObject = snapshotValue instanceof Object;
 
-      const gamesData = isArray
-        ? snapshotValue.filter((game) => game !== null).reverse()
-        : isObject
-        ? Array(snapshotValue)
-            .filter((game) => game !== null)
-            .reverse()
-        : [];
+      const gamesData = (
+        isArray
+          ? snapshotValue.filter((game) => game !== null).reverse()
+          : isObject
+          ? Object.entries(snapshotValue)
+              .map(([_, value]) => value as GameInterface)
+              .filter((game) => game !== null)
+              .reverse()
+          : []
+      ) as GameInterface[];
 
-      return gamesData as GameInterface[];
+      gameRequiredFields.forEach((field) => {
+        if (!gamesData.every((x) => x[field]))
+          throw new Error(`No ${field} field`);
+      });
+
+      return gamesData;
     } catch (e) {
       console.log(e);
       return [];
@@ -81,8 +101,9 @@ export const getSessionBets = async (): Promise<BetInterface[]> => {
 
         if (bets.empty) return [];
 
-        const betsArray = bets.docs.map((doc) => doc.data());
-        return betsArray as BetInterface[];
+        const betsArray = bets.docs.map((doc) => doc.data()) as BetInterface[];
+
+        return betsArray;
       },
       ["cache-getSessionBets"],
       {
@@ -106,8 +127,9 @@ export const getAllUsersBets = cache(
 
       if (bets.empty) return [];
 
-      const betsArray = bets.docs.map((doc) => doc.data());
-      return betsArray as BetInterface[];
+      const betsArray = bets.docs.map((doc) => doc.data()) as BetInterface[];
+
+      return betsArray;
     } catch (e) {
       console.log(e);
       return [];

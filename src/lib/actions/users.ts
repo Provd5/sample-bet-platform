@@ -25,8 +25,9 @@ export const getUser = cache(
       const usersRef = doc(db, "users", userId);
       const user = await getDoc(usersRef);
       if (!user.exists()) return null;
+      const userData = user.data() as UserInterface;
 
-      return user.data() as UserInterface;
+      return userData;
     } catch (e) {
       console.log(e);
       return null;
