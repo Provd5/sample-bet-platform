@@ -1,13 +1,17 @@
 import type { FC } from "react";
 
-import { getAllUsersBets, getGames, getSessionBets } from "~/lib/actions/games";
+import {
+  getAllGames,
+  getAllUsersBets,
+  getSessionBets,
+} from "~/lib/actions/games";
 
 import { DataTable } from "../data-table";
 import { BetModal } from "./Game/Bet/bet-modal";
 
 export const GamesTable: FC = async ({}) => {
   const [games, bets, sessionBets] = await Promise.all([
-    getGames(),
+    getAllGames(),
     getAllUsersBets(),
     getSessionBets(),
   ]);

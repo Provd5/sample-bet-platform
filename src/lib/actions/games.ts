@@ -1,14 +1,7 @@
 "use server";
 
 import { revalidateTag, unstable_cache as cache } from "next/cache";
-import {
-  child,
-  get,
-  limitToLast,
-  orderByChild,
-  query,
-  ref,
-} from "firebase/database";
+import { child, get, orderByChild, query, ref } from "firebase/database";
 import {
   collection,
   doc,
@@ -31,7 +24,7 @@ import {
 } from "../validatorSchemas/bet";
 import { getUser } from "./users";
 
-export const getGames = cache(
+export const getAllGames = cache(
   async (): Promise<GameInterface[]> => {
     const gameRequiredFields: Partial<keyof GameInterface>[] = [
       "id",
@@ -48,8 +41,7 @@ export const getGames = cache(
       const dbRef = ref(realtimeDb);
       const queryRef = query(
         child(dbRef, `matches/`),
-        orderByChild("timestamp"),
-        limitToLast(100)
+        orderByChild("timestamp")
       );
       const games = await get(queryRef);
 
@@ -67,53 +59,6 @@ export const getGames = cache(
               .map(([_, value]) => value as GameInterface)
               .filter((game) => game !== null)
               .reverse()
-          : []
-      ) as GameInterface[];
-
-      gameRequiredFields.forEach((field) => {
-        if (!gamesData.every((x) => x[field]))
-          throw new Error(`No ${field} field`);
-      });
-
-      return gamesData;
-    } catch (e) {
-      console.log(e);
-      return [];
-    }
-  },
-  ["cache-getGames"],
-  {
-    tags: ["cache-getGames"],
-    revalidate: 60, // revalidate every 1 minute
-  }
-);
-
-export const getAllGames = cache(
-  async (): Promise<GameInterface[]> => {
-    const gameRequiredFields: Partial<keyof GameInterface>[] = [
-      "id",
-      "status",
-      "stage",
-    ] as const;
-
-    try {
-      const dbRef = ref(realtimeDb);
-      const queryRef = query(child(dbRef, `matches/`));
-      const games = await get(queryRef);
-
-      if (!games.exists()) return [];
-      const snapshotValue: unknown = games.val();
-
-      const isArray = snapshotValue instanceof Array;
-      const isObject = snapshotValue instanceof Object;
-
-      const gamesData = (
-        isArray
-          ? snapshotValue.filter((game) => game !== null)
-          : isObject
-          ? Object.entries(snapshotValue)
-              .map(([_, value]) => value as GameInterface)
-              .filter((game) => game !== null)
           : []
       ) as GameInterface[];
 
