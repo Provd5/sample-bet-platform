@@ -31,7 +31,7 @@ import {
 } from "../validatorSchemas/bet";
 import { getUser } from "./users";
 
-export const getAllGames = cache(
+export const getGames = cache(
   async (): Promise<GameInterface[]> => {
     const gameRequiredFields: Partial<keyof GameInterface>[] = [
       "id",
@@ -81,10 +81,57 @@ export const getAllGames = cache(
       return [];
     }
   },
+  ["cache-getGames"],
+  {
+    tags: ["cache-getGames"],
+    revalidate: 60, // revalidate every 1 minute
+  }
+);
+
+export const getAllGames = cache(
+  async (): Promise<GameInterface[]> => {
+    const gameRequiredFields: Partial<keyof GameInterface>[] = [
+      "id",
+      "status",
+      "stage",
+    ] as const;
+
+    try {
+      const dbRef = ref(realtimeDb);
+      const queryRef = query(child(dbRef, `matches/`));
+      const games = await get(queryRef);
+
+      if (!games.exists()) return [];
+      const snapshotValue: unknown = games.val();
+
+      const isArray = snapshotValue instanceof Array;
+      const isObject = snapshotValue instanceof Object;
+
+      const gamesData = (
+        isArray
+          ? snapshotValue.filter((game) => game !== null)
+          : isObject
+          ? Object.entries(snapshotValue)
+              .map(([_, value]) => value as GameInterface)
+              .filter((game) => game !== null)
+          : []
+      ) as GameInterface[];
+
+      gameRequiredFields.forEach((field) => {
+        if (!gamesData.every((x) => x[field]))
+          throw new Error(`No ${field} field`);
+      });
+
+      return gamesData;
+    } catch (e) {
+      console.log(e);
+      return [];
+    }
+  },
   ["cache-getAllGames"],
   {
     tags: ["cache-getAllGames"],
-    revalidate: 60, // revalidate every 1 minute
+    revalidate: 120, // revalidate every 2 minutes
   }
 );
 

@@ -53,7 +53,6 @@ export default function resultsCalculator(
       away_goals_hit && home_goals_hit && winner_hit;
 
     if (game.status === "FINISHED") {
-
       if (winner_hit) {
         points += WINNER_POINTS;
       }
@@ -66,7 +65,7 @@ export default function resultsCalculator(
       }
     }
 
-    points * multiplier;
+    points *= multiplier;
 
     const existingUser = acc.find((user) => user.user_id === bet.user_id);
     if (existingUser) {
