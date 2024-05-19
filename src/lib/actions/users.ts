@@ -4,13 +4,12 @@ import { unstable_cache as cache } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { signOut } from "firebase/auth";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 
 import { type UserInterface } from "~/types/users";
 
 import ROUTES from "~/constants/routes";
 
-import { errorHandler } from "../error-handler";
 import { auth, db } from "../firebase";
 
 export async function logOut() {
@@ -29,33 +28,13 @@ export const getUser = cache(
 
       return user.data() as UserInterface;
     } catch (e) {
-      throw new Error(errorHandler(e));
+      console.log(e);
+      return null;
     }
   },
   ["cache-getUser"],
   {
     tags: ["cache-getUser"],
-    revalidate: 120, // revalidate every 2 minutes
-  }
-);
-
-export const getAllUsers = cache(
-  async (): Promise<UserInterface[]> => {
-    try {
-      const usersRef = collection(db, "users");
-      const users = await getDocs(usersRef);
-
-      if (users.empty) return [];
-
-      const usersArray = users.docs.map((doc) => doc.data());
-      return usersArray as UserInterface[];
-    } catch (e) {
-      throw new Error(errorHandler(e));
-    }
-  },
-  ["cache-getAllUsers"],
-  {
-    tags: ["cache-getAllUsers"],
     revalidate: 120, // revalidate every 2 minutes
   }
 );

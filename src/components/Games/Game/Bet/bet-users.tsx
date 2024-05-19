@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { type FC } from "react";
 
 import { type BetInterface, type GameInterface } from "~/types/games";
 
@@ -59,7 +59,10 @@ export const BetUsers: FC<BetUsersProps> = ({ game, bets }) => {
               teamName={game.homeTeamName}
               teamIcon={game.homeTeamIcon}
               teamSide={"HOME_TEAM"}
-              winner={game.regularTimeScore?.winner}
+              gameData={{
+                winner: game.regularTimeScore?.winner,
+                status: game.status,
+              }}
               secondary
             />
             <p className="text-xl font-bold">
@@ -72,7 +75,10 @@ export const BetUsers: FC<BetUsersProps> = ({ game, bets }) => {
               teamName={game.awayTeamName}
               teamIcon={game.awayTeamIcon}
               teamSide={"AWAY_TEAM"}
-              winner={game.regularTimeScore?.winner}
+              gameData={{
+                winner: game.regularTimeScore?.winner,
+                status: game.status,
+              }}
               secondary
             />
             <p className="text-xl font-bold">

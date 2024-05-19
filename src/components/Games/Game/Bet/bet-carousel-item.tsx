@@ -42,9 +42,7 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
           <p className="text-gray-500">
             Zwycięzca:{" "}
             <span className={winnerHit ? "text-green-600" : "text-destructive"}>
-              {userBet.winner === ""
-                ? "Nie obstawiono"
-                : translateConstantsToPolish(userBet.winner)}
+              {translateConstantsToPolish(userBet.winner)}
             </span>
           </p>
         </div>

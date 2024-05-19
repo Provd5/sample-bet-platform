@@ -1,6 +1,6 @@
 "use client";
 
-import { type FC } from "react";
+import { type FC, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CircleAlert, LoaderCircle } from "lucide-react";
@@ -34,12 +34,14 @@ export const BetGame: FC<BetGameProps> = ({ game, sessionBet }) => {
   const { toast } = useToast();
   const isFinished = Date.now() > game.timestamp;
 
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
   const {
     register,
     handleSubmit,
     setValue,
     setError,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting, isSubmitSuccessful, isDirty },
   } = useForm<betSchemaType>({
     resolver: zodResolver(betSchema),
     defaultValues: {
@@ -65,6 +67,7 @@ export const BetGame: FC<BetGameProps> = ({ game, sessionBet }) => {
         toast({
           title: "Pomyślnie obstawiono mecz ✅",
         });
+        closeButtonRef.current?.click();
       }
     } catch (error) {
       toast({
@@ -114,15 +117,15 @@ export const BetGame: FC<BetGameProps> = ({ game, sessionBet }) => {
         )}
       </div>
       <AlertDialogFooter>
-        <AlertDialogCancel>Zamknij</AlertDialogCancel>
+        <AlertDialogCancel ref={closeButtonRef}>Zamknij</AlertDialogCancel>
         <Button
-          disabled={isSubmitting || isFinished}
+          disabled={isSubmitting || isFinished || !isDirty}
           type="submit"
           className={cn(
             isSubmitSuccessful && "bg-green-600 hover:bg-green-300 text-white"
           )}
         >
-          {isFinished ? "Zakończony" : "Postaw"}
+          {isFinished ? "Zakończono" : "Postaw"}
           {isSubmitting && (
             <LoaderCircle className="ml-1 animate-spin size-4" />
           )}

@@ -18,7 +18,7 @@ export const ResultsTable: FC = async ({}) => {
   const results = resultsCalculator(games, bets);
 
   return (
-    <DataTable isData={!!results}>
+    <DataTable isData={!!results.length}>
       <>
         <TableHeader />
         {results.map((result, index) => (

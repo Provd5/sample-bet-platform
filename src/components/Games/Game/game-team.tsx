@@ -1,13 +1,18 @@
 import type { FC } from "react";
 import Image from "next/image";
 
+import { type GameInterface } from "~/types/games";
+
 import { cn, translateConstantsToPolish } from "~/lib/utils";
 
 interface GameTeamProps {
   teamName: string;
   teamIcon: string;
   teamSide: "HOME_TEAM" | "AWAY_TEAM";
-  winner?: string;
+  gameData?: {
+    winner: string | undefined;
+    status: GameInterface["status"];
+  };
   secondary?: boolean;
 }
 
@@ -15,7 +20,7 @@ export const GameTeam: FC<GameTeamProps> = ({
   teamName,
   teamIcon,
   teamSide,
-  winner,
+  gameData,
   secondary = false,
 }) => {
   return (
@@ -32,9 +37,11 @@ export const GameTeam: FC<GameTeamProps> = ({
         </h2>
         <h1
           className={cn(
-            "leading-none sm:w-48",
-            secondary ? "w-full line-clamp-1" : "w-24",
-            winner === teamSide && "text-green-600"
+            "sm:w-48 leading-tight",
+            secondary ? "w-full line-clamp-1" : "w-28 truncate",
+            gameData?.status === "FINISHED" &&
+              gameData?.winner === teamSide &&
+              "text-green-600"
           )}
         >
           {teamName}

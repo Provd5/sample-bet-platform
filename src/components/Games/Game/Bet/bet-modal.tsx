@@ -19,18 +19,18 @@ interface BetModalProps {
 }
 
 export const BetModal: FC<BetModalProps> = ({ sessionBet, game, bets }) => {
-  const isFinished = game.status === "FINISHED";
+  const notStarted = game.status === "TIMED";
 
   return (
     <AlertDialog>
       <AlertDialogTrigger className="w-full">
-        <GameCard game={game} isSessionBet={!!sessionBet} />
+        <GameCard game={game} sessionBet={sessionBet} />
       </AlertDialogTrigger>
       <AlertDialogContent>
-        {isFinished ? (
-          <BetUsers game={game} bets={bets} />
-        ) : (
+        {notStarted ? (
           <BetGame game={game} sessionBet={sessionBet} />
+        ) : (
+          <BetUsers game={game} bets={bets} />
         )}
       </AlertDialogContent>
     </AlertDialog>

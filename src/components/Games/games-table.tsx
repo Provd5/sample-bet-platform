@@ -17,7 +17,7 @@ export const GamesTable: FC = async ({}) => {
   ]);
 
   return (
-    <DataTable isData={!!games && !!bets}>
+    <DataTable isData={!!games.length && !!bets.length}>
       {games &&
         games.map((game) => {
           const sessionBet = sessionBets.find((bet) => bet.game_id === game.id);
