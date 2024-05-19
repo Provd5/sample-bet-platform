@@ -45,12 +45,15 @@ export const getAllGames = cache(
       if (!games.exists()) return [];
       const snapshotValue: unknown = games.val();
       const isArray = snapshotValue instanceof Array;
+      const isObject = typeof snapshotValue === "object";
 
       const gamesData = isArray
         ? snapshotValue.filter((game) => game !== null).reverse()
-        : Array(snapshotValue)
+        : isObject
+        ? Array(snapshotValue)
             .filter((game) => game !== null)
-            .reverse();
+            .reverse()
+        : [];
 
       return gamesData as GameInterface[];
     } catch (e) {
