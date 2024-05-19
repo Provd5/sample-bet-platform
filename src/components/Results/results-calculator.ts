@@ -1,26 +1,25 @@
 import { type BetInterface, type GameInterface } from "~/types/games";
 import { type ResultInterface } from "~/types/results";
 
-const GOALS_POINTS = 0.5;
 const WINNER_POINTS = 1;
 const ACCURATE_SCORE_POINTS = 2;
-const ACCURATE_SCORE_AND_WINNER_POINTS = 3;
+const ACCURATE_SCORE_AND_WINNER_BONUS_POINTS = 0;
 
 const STAGE_MULTIPLIER = (stage: GameInterface["stage"]) => {
   let MULTIPLIER: number;
 
   switch (stage) {
     case "FINAL":
-      MULTIPLIER = 3;
+      MULTIPLIER = 1;
       break;
     case "SEMI_FINALS":
-      MULTIPLIER = 2.5;
+      MULTIPLIER = 1;
       break;
     case "QUARTER_FINALS":
-      MULTIPLIER = 2;
+      MULTIPLIER = 1;
       break;
     case "LAST_16":
-      MULTIPLIER = 1.5;
+      MULTIPLIER = 1;
       break;
     default:
       MULTIPLIER = 1;
@@ -34,10 +33,12 @@ export default function resultsCalculator(
   games: GameInterface[],
   bets: BetInterface[]
 ) {
+  const gameMap = new Map(games.map((game) => [game.id, game]));
+
   const results = bets.reduce<ResultInterface[]>((acc, bet) => {
-    const game = games.find((game) => game.id === bet.game_id);
+    const game = gameMap.get(bet.game_id);
     if (!game) {
-      return [];
+      return acc;
     }
 
     const multiplier = STAGE_MULTIPLIER(game.stage);
@@ -52,12 +53,7 @@ export default function resultsCalculator(
       away_goals_hit && home_goals_hit && winner_hit;
 
     if (game.status === "FINISHED") {
-      if (away_goals_hit) {
-        points += GOALS_POINTS;
-      }
-      if (home_goals_hit) {
-        points += GOALS_POINTS;
-      }
+
       if (winner_hit) {
         points += WINNER_POINTS;
       }
@@ -66,7 +62,7 @@ export default function resultsCalculator(
         accurate_scores += 1;
       }
       if (accurate_score_and_winner_hit) {
-        points += ACCURATE_SCORE_AND_WINNER_POINTS;
+        points += ACCURATE_SCORE_AND_WINNER_BONUS_POINTS;
       }
     }
 
