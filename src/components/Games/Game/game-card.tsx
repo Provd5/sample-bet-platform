@@ -3,7 +3,7 @@ import { CircleCheckBig } from "lucide-react";
 
 import { type BetInterface, type GameInterface } from "~/types/games";
 
-import { cn, translateConstantsToPolish } from "~/lib/utils";
+import { cn, translateConstantsToPolish, getMatchWinnerName } from "~/lib/utils";
 
 import { GameDate } from "./game-date";
 import { GameTeam } from "./game-team";
@@ -22,7 +22,7 @@ export const GameCard: FC<GameCardProps> = ({ game, sessionBet }) => {
             className={cn(
               "text-sm",
               (game.status === "IN_PLAY" || game.status === "PAUSED") &&
-                "text-destructive",
+              "text-destructive",
               game.status === "FINISHED" && "text-gray-500"
             )}
           >
@@ -43,7 +43,7 @@ export const GameCard: FC<GameCardProps> = ({ game, sessionBet }) => {
                 className={cn(
                   "flex gap-1 text-xl",
                   (game.status === "IN_PLAY" || game.status === "PAUSED") &&
-                    "text-destructive"
+                  "text-destructive"
                 )}
               >
                 <p>{game.regularTimeScore?.home || 0}</p> -{" "}
@@ -67,9 +67,9 @@ export const GameCard: FC<GameCardProps> = ({ game, sessionBet }) => {
               className={cn(
                 "self-start ,d:self-end",
                 game.stage === "FINAL" &&
-                  "font-semibold dark:text-orange-500 text-orange-600",
+                "font-semibold dark:text-orange-500 text-orange-600",
                 game.stage === "SEMI_FINALS" &&
-                  "font-semibold dark:text-cyan-400 text-cyan-600",
+                "font-semibold dark:text-cyan-400 text-cyan-600",
                 game.stage === "QUARTER_FINALS" && "font-semibold"
               )}
             >
@@ -80,9 +80,8 @@ export const GameCard: FC<GameCardProps> = ({ game, sessionBet }) => {
                 <span className="flex gap-1 items-center">
                   Obstawiono! <CircleCheckBig className="size-4 shrink-0" />
                 </span>
-                <span className="flex -mt-1.5">{`(${sessionBet.home_goals} - ${
-                  sessionBet.away_goals
-                }, ${translateConstantsToPolish(sessionBet.winner)})`}</span>
+                <span className="flex -mt-1.5">{`(${sessionBet.home_goals} - ${sessionBet.away_goals
+                  }, ${getMatchWinnerName(sessionBet.winner, game)})`}</span>
               </p>
             )}
           </div>
