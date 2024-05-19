@@ -34,7 +34,9 @@ export const BetTeam: FC<BetTeamProps> = ({
       type="single"
       className="flex-col justify-between"
       onValueChange={(value: betSchemaType["winner"]) => {
-        value ? setValue("winner", value) : setValue("winner", "");
+        value
+          ? setValue("winner", value, { shouldDirty: true })
+          : setValue("winner", "", { shouldDirty: true });
       }}
       defaultValue={userData.winner}
     >

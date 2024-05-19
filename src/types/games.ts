@@ -54,6 +54,6 @@ export interface BetInterface {
   game_id: GameInterface["id"];
   away_goals: number;
   home_goals: number;
-  winner: MatchWinner | "";
+  winner: MatchWinner;
   game_stage: MatchStage;
 }

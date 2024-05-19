@@ -23,7 +23,7 @@ import { type BetInterface, type GameInterface } from "~/types/games";
 
 import { readSessionId } from "../auth/session";
 import { errorHandler } from "../error-handler";
-import { db, realdb } from "../firebase";
+import { db, realtimeDb } from "../firebase";
 import {
   betGameSchema,
   betSchema,
@@ -34,7 +34,7 @@ import { getUser } from "./users";
 export const getAllGames = cache(
   async (): Promise<GameInterface[]> => {
     try {
-      const dbRef = ref(realdb);
+      const dbRef = ref(realtimeDb);
       const queryRef = query(
         child(dbRef, `matches/`),
         orderByChild("timestamp"),
@@ -43,19 +43,25 @@ export const getAllGames = cache(
       const games = await get(queryRef);
 
       if (!games.exists()) return [];
-      const gamesData = (games.val() as GameInterface[])
-        .filter((game) => game !== null)
-        .reverse();
+      const snapshotValue: unknown = games.val();
+      const isArray = snapshotValue instanceof Array;
 
-      return gamesData;
+      const gamesData = isArray
+        ? snapshotValue.filter((game) => game !== null).reverse()
+        : Array(snapshotValue)
+            .filter((game) => game !== null)
+            .reverse();
+
+      return gamesData as GameInterface[];
     } catch (e) {
-      throw new Error(errorHandler(e));
+      console.log(e);
+      return [];
     }
   },
   ["cache-getAllGames"],
   {
     tags: ["cache-getAllGames"],
-    revalidate: 120, // revalidate every 2 minutes
+    revalidate: 60, // revalidate every 1 minute
   }
 );
 
@@ -84,7 +90,8 @@ export const getSessionBets = async (): Promise<BetInterface[]> => {
     const bets = await fetchFn(session.userId);
     return bets;
   } catch (e) {
-    throw new Error(errorHandler(e));
+    console.log(e);
+    return [];
   }
 };
 
@@ -99,7 +106,8 @@ export const getAllUsersBets = cache(
       const betsArray = bets.docs.map((doc) => doc.data());
       return betsArray as BetInterface[];
     } catch (e) {
-      throw new Error(errorHandler(e));
+      console.log(e);
+      return [];
     }
   },
   ["cache-getAllUsersBets"],
@@ -121,8 +129,17 @@ export const betGame = async (
     const validValues = betSchema.parse(values);
     const validGameValues = betGameSchema.parse(gameValues);
 
+    if (values.winner === "")
+      return {
+        success: false,
+        errorMsg: "Wybierz najpierw kto wygra!",
+      };
+
     if (Date.now() > gameValues.timestamp)
-      return { success: false, errorMsg: "Mecz został już zakończony!" };
+      return {
+        success: false,
+        errorMsg: "Zakłady na ten mecz zostały już zamknięte!",
+      };
 
     const session = await readSessionId();
     if (!session) return { success: false, errorMsg: ERROR_ENUM.UNAUTHORIZED };
