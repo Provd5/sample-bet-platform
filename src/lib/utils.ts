@@ -32,7 +32,7 @@ export function translateConstantsToPolish(
     case "IN_PLAY":
       return "W trakcie";
     case "PAUSED":
-      return "Wstrzymany";
+      return "Przerwa";
     case "FINISHED":
       return "Zakończony";
     case "POSTPONED":
@@ -51,6 +51,8 @@ export function translateConstantsToPolish(
       return "Półfinał";
     case "FINAL":
       return "Finał";
+    case "REGULAR_SEASON":
+      return "Liga";
     default:
       return constant;
   }

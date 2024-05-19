@@ -13,6 +13,7 @@ export const MatchStatusArray = [
 
 type MatchStage = (typeof MatchStageArray)[number];
 export const MatchStageArray = [
+  "REGULAR_SEASON",
   "GROUP_STAGE",
   "LAST_16",
   "QUARTER_FINALS",
