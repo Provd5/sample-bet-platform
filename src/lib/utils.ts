@@ -3,7 +3,11 @@ import { format } from "date-fns";
 import { pl } from "date-fns/locale";
 import { twMerge } from "tailwind-merge";
 
-import { type constantsToTranslate, type MatchWinner, type GameInterface } from "~/types/games";
+import {
+  type constantsToTranslate,
+  type GameInterface,
+  type MatchWinner,
+} from "~/types/games";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -14,7 +18,8 @@ export function dateFormat(timestamp: number): string {
 }
 
 export function getMatchWinnerName(
-  matchWinner: MatchWinner, game: GameInterface
+  matchWinner: MatchWinner,
+  game: GameInterface
 ): string {
   switch (matchWinner) {
     case "AWAY_TEAM":
