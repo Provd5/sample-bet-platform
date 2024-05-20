@@ -19,6 +19,8 @@ interface AuthPageProps {
   children: React.ReactNode;
 }
 
+const CURRENT_EVENT = "Euro 2024";
+
 export const AuthPage: FC<AuthPageProps> = ({ isLogin = false, children }) => {
   return (
     <div className="flex size-full items-center">
@@ -26,7 +28,7 @@ export const AuthPage: FC<AuthPageProps> = ({ isLogin = false, children }) => {
         <Card>
           <CardHeader>
             <CardTitle>{isLogin ? "Zaloguj się" : "Utwórz konto"}</CardTitle>
-            <CardDescription>{isLogin ? "💸" : "🤑"}</CardDescription>
+            <CardDescription>{`Betowanie - ${CURRENT_EVENT}`}</CardDescription>
           </CardHeader>
           <CardContent>{children}</CardContent>
           <CardFooter>

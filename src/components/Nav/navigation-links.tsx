@@ -17,7 +17,7 @@ export const NavigationLinks: FC = async ({}) => {
 
   return (
     <>
-      <h1 className="mr-auto px-1 flex gap-1 items-center">
+      <h1 className="mr-auto flex gap-1 items-center">
         <CircleUser className="size-5" />
         <span className="font-bold text-lg leading-loose">
           {user?.username}
