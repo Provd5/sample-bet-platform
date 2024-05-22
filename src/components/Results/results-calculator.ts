@@ -1,12 +1,6 @@
 import { type BetInterface, type GameInterface } from "~/types/games";
-import { type ResultInterface } from "~/types/results";
+import { PointsInterface, type ResultInterface } from "~/types/results";
 
-interface PointsInterface {
-  currentPoints: number;
-  currentLivePoints: number,
-  currentAccurateScores: number,
-  currentLiveAccurateScores: number
-}
 
 const WINNER_POINTS = 1;
 const ACCURATE_SCORE_POINTS = 2;
