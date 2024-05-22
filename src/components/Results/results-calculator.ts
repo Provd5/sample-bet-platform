@@ -120,8 +120,8 @@ function calculatePoints(currentPoints: PointsInterface | undefined, bet: BetInt
 
   let points = currentPoints?.currentPoints || 0;
   let livePoints = currentPoints?.currentLivePoints || 0;
-  let liveAccurateScores = 0;
-  let accurateScores = 0;
+  let liveAccurateScores = currentPoints?.currentLiveAccurateScores || 0;
+  let accurateScores = currentPoints?.currentAccurateScores || 0;
 
   const away_goals_hit = bet.away_goals === game.regularTimeScore?.away;
   const home_goals_hit = bet.home_goals === game.regularTimeScore?.home;
@@ -151,6 +151,7 @@ function calculatePoints(currentPoints: PointsInterface | undefined, bet: BetInt
 
   const multiplier = STAGE_MULTIPLIER(game.stage);
   points *= multiplier;
+  livePoints *= multiplier;
 
   return {
     currentPoints: points,
