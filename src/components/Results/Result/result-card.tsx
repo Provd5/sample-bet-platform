@@ -36,8 +36,8 @@ export const ResultCard: FC<ResultCardProps> = ({
         </h1>
         <div className="flex items-center justify-between divide-x divide-x-gray-500/10">
           <ResultCardItem className="font-bold">{`${place}.`}</ResultCardItem>
-          <ResultCardItem>{result.accurate_scores}</ResultCardItem>
-          <ResultCardItem>{result.points}</ResultCardItem>
+          <ResultCardItem>{result.points.currentLiveAccurateScores}</ResultCardItem>
+          <ResultCardItem>{result.points.currentLivePoints}</ResultCardItem>
         </div>
       </div>
     </div>
