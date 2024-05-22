@@ -18,13 +18,13 @@ export const TableLoader: FC<TableLoaderProps> = ({ variant }) => {
           key={`TableLoader-${i}`}
           className={cn(
             "w-full flex items-center justify-center",
-            variant === "games" ? "h-[82px]" : "h-[77px]"
+            variant === "games" ? "h-[83px]" : "h-[53px]"
           )}
         >
           <div
             className={cn(
               "w-full flex items-center justify-center bg-slate-300 dark:bg-slate-800 animate-pulse",
-              variant === "games" ? "h-[54px]" : "h-[56px]"
+              variant === "games" ? "h-[55px]" : "h-[24px]"
             )}
             style={{ animationDelay: `${i * 0.2}s` }}
           ></div>

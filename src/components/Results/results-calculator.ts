@@ -1,6 +1,5 @@
 import { type BetInterface, type GameInterface } from "~/types/games";
-import { PointsInterface, type ResultInterface } from "~/types/results";
-
+import { type PointsInterface, type ResultInterface } from "~/types/results";
 
 const WINNER_POINTS = 1;
 const ACCURATE_SCORE_POINTS = 2;
@@ -43,11 +42,11 @@ export default function resultsCalculator(
       return;
     }
 
-    let currentPoints = userResultsMap.get(bet.user_id)?.points;
-    let points = calculatePoints(currentPoints, bet, game);
+    const currentPoints = userResultsMap.get(bet.user_id)?.points;
+    const points = calculatePoints(currentPoints, bet, game);
 
     if (userResultsMap.has(bet.user_id)) {
-      let existingUser = userResultsMap.get(bet.user_id);
+      const existingUser = userResultsMap.get(bet.user_id);
       existingUser!.points = points;
     } else {
       userResultsMap.set(bet.user_id, {
@@ -55,18 +54,16 @@ export default function resultsCalculator(
         username: bet.username,
         points,
         currentPosition: 0, // Will calculate this later
-        livePositionAdvance: 0 // Will calculate this later
+        livePositionAdvance: 0, // Will calculate this later
       });
     }
   });
 
-
-
-  let leaderboard: ResultInterface[] = Array.from(userResultsMap.values())
+  const leaderboard: ResultInterface[] = Array.from(userResultsMap.values());
 
   // Calculate current positions for finished matches
   calculateLeaderboardPositions(leaderboard, compareResults);
-  let initialPositions = new Map<string, number>();
+  const initialPositions = new Map<string, number>();
   leaderboard.forEach((result) => {
     initialPositions.set(result.user_id, result.currentPosition);
   });
@@ -75,7 +72,7 @@ export default function resultsCalculator(
   calculateLeaderboardPositions(leaderboard, compareLiveResults);
   // Calculate live positions advance
   leaderboard.forEach((result) => {
-    let initialPosition = initialPositions.get(result.user_id);
+    const initialPosition = initialPositions.get(result.user_id);
     if (initialPosition !== undefined) {
       result.livePositionAdvance = initialPosition - result.currentPosition;
     }
@@ -84,12 +81,13 @@ export default function resultsCalculator(
   return leaderboard;
 }
 
-
 function compareLiveResults(a: ResultInterface, b: ResultInterface): number {
   if (b.points.currentLivePoints !== a.points.currentLivePoints) {
     return b.points.currentLivePoints - a.points.currentLivePoints;
   } else {
-    return b.points.currentLiveAccurateScores - a.points.currentLiveAccurateScores;
+    return (
+      b.points.currentLiveAccurateScores - a.points.currentLiveAccurateScores
+    );
   }
 }
 
@@ -101,12 +99,14 @@ function compareResults(a: ResultInterface, b: ResultInterface): number {
   }
 }
 
-function calculateLeaderboardPositions(results: ResultInterface[], comparator: (a: ResultInterface, b: ResultInterface) => number) {
+function calculateLeaderboardPositions(
+  results: ResultInterface[],
+  comparator: (a: ResultInterface, b: ResultInterface) => number
+) {
   results.sort(comparator);
 
   let currentPosition = 1;
   results.forEach((result, index) => {
-
     if (index > 0 && comparator(results[index - 1], result) === 0) {
       result.currentPosition = results[index - 1].currentPosition;
     } else {
@@ -116,12 +116,15 @@ function calculateLeaderboardPositions(results: ResultInterface[], comparator: (
   });
 }
 
-function calculatePoints(currentPoints: PointsInterface | undefined, bet: BetInterface, game: GameInterface): PointsInterface {
-
+function calculatePoints(
+  currentPoints: PointsInterface | undefined,
+  bet: BetInterface,
+  game: GameInterface
+): PointsInterface {
   let points = currentPoints?.currentPoints || 0;
   let livePoints = currentPoints?.currentLivePoints || 0;
-  let liveAccurateScores = currentPoints?.currentLiveAccurateScores || 0;
   let accurateScores = currentPoints?.currentAccurateScores || 0;
+  let liveAccurateScores = currentPoints?.currentLiveAccurateScores || 0;
 
   const away_goals_hit = bet.away_goals === game.regularTimeScore?.away;
   const home_goals_hit = bet.home_goals === game.regularTimeScore?.home;
@@ -131,7 +134,10 @@ function calculatePoints(currentPoints: PointsInterface | undefined, bet: BetInt
     away_goals_hit && home_goals_hit && winner_hit;
 
   const isGameFinished = game.status == "FINISHED";
-  const isGameInPlayOrFinished = game.status == "FINISHED" || game.status == "IN_PLAY" || game.status == "PAUSED";
+  const isGameInPlayOrFinished =
+    game.status == "FINISHED" ||
+    game.status == "IN_PLAY" ||
+    game.status == "PAUSED";
 
   if (winner_hit) {
     points += isGameFinished ? WINNER_POINTS : 0;
@@ -148,7 +154,6 @@ function calculatePoints(currentPoints: PointsInterface | undefined, bet: BetInt
     points += ACCURATE_SCORE_AND_WINNER_BONUS_POINTS;
   }
 
-
   const multiplier = STAGE_MULTIPLIER(game.stage);
   points *= multiplier;
   livePoints *= multiplier;
@@ -157,6 +162,6 @@ function calculatePoints(currentPoints: PointsInterface | undefined, bet: BetInt
     currentPoints: points,
     currentLivePoints: livePoints,
     currentAccurateScores: accurateScores,
-    currentLiveAccurateScores: liveAccurateScores
-  }
+    currentLiveAccurateScores: liveAccurateScores,
+  };
 }

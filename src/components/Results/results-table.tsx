@@ -21,12 +21,11 @@ export const ResultsTable: FC = async ({}) => {
     <DataTable isData={!!games.length && !!bets.length}>
       <>
         <TableHeader />
-        {results.map((result, index) => (
+        {results.map((result) => (
           <ResultCard
             key={`ResultCard-results-${result.user_id}`}
             sessionId={session?.userId}
             result={result}
-            place={index + 1}
           />
         ))}
       </>

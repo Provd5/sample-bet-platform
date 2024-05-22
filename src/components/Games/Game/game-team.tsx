@@ -30,9 +30,15 @@ export const GameTeam: FC<GameTeamProps> = ({
         !secondary && teamSide === "AWAY_TEAM" && "flex-row text-start"
       )}
     >
-      <Image width={30} height={30} src={teamIcon} alt={`${teamName} icon`} />
+      <Image
+        width={30}
+        height={30}
+        src={teamIcon}
+        alt={`${teamName} icon`}
+        className="size-[30px] object-contain"
+      />
       <div className="flex flex-col">
-        <h2 className="-mb-0.5 text-sm text-gray-500">
+        <h2 className="-mb-0.5 text-sm text-gray-500 leading-tight">
           {translateConstantsToPolish(teamSide)}
         </h2>
         <h1
