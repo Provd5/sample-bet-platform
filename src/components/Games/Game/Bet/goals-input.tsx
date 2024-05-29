@@ -32,7 +32,13 @@ export const GoalsInput: FC<GoalsInputProps> = ({
   return (
     <div className="flex flex-col items-center gap-0.5">
       <div className="flex gap-1 items-center">
-        <Image src={teamIcon} alt={`${teamName} icon`} width={20} height={20} />
+        <Image
+          src={teamIcon}
+          alt={`${teamName} icon`}
+          width={20}
+          height={20}
+          className="size-[20px] object-contain"
+        />
         <p className="text-sm">
           {teamSide === "AWAY_TEAM" ? "Gole gości:" : "Gole gospodarzy:"}
         </p>

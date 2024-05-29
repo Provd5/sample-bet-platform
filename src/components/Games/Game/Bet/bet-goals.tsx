@@ -12,7 +12,7 @@ interface BetGoalsProps {
   homeTeamIcon: string;
   awayTeamName: string;
   awayTeamIcon: string;
-  userData: { away_goals: number; home_goals: number };
+  userData: { awayGoals: number; homeGoals: number };
 }
 
 export const BetGoals: FC<BetGoalsProps> = ({
@@ -36,7 +36,7 @@ export const BetGoals: FC<BetGoalsProps> = ({
           teamIcon={homeTeamIcon}
           teamName={homeTeamName}
           teamSide="HOME_TEAM"
-          userGoalsData={userData.home_goals}
+          userGoalsData={userData.homeGoals}
         />
         <GoalsInput
           setValue={setValue}
@@ -44,7 +44,7 @@ export const BetGoals: FC<BetGoalsProps> = ({
           teamIcon={awayTeamIcon}
           teamName={awayTeamName}
           teamSide="AWAY_TEAM"
-          userGoalsData={userData.away_goals}
+          userGoalsData={userData.awayGoals}
         />
       </div>
     </div>

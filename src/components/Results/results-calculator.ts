@@ -37,20 +37,20 @@ export default function resultsCalculator(
   const userResultsMap = new Map<string, ResultInterface>();
 
   bets.forEach((bet) => {
-    const game = gameMap.get(bet.game_id);
+    const game = gameMap.get(bet.gameId);
     if (!game) {
       return;
     }
 
-    const currentPoints = userResultsMap.get(bet.user_id)?.points;
+    const currentPoints = userResultsMap.get(bet.userId)?.points;
     const points = calculatePoints(currentPoints, bet, game);
 
-    if (userResultsMap.has(bet.user_id)) {
-      const existingUser = userResultsMap.get(bet.user_id);
+    if (userResultsMap.has(bet.userId)) {
+      const existingUser = userResultsMap.get(bet.userId);
       existingUser!.points = points;
     } else {
-      userResultsMap.set(bet.user_id, {
-        user_id: bet.user_id,
+      userResultsMap.set(bet.userId, {
+        userId: bet.userId,
         username: bet.username,
         points,
         currentPosition: 0, // Will calculate this later
@@ -65,14 +65,14 @@ export default function resultsCalculator(
   calculateLeaderboardPositions(leaderboard, compareResults);
   const initialPositions = new Map<string, number>();
   leaderboard.forEach((result) => {
-    initialPositions.set(result.user_id, result.currentPosition);
+    initialPositions.set(result.userId, result.currentPosition);
   });
 
   // Calculate current positions for live+finished matches
   calculateLeaderboardPositions(leaderboard, compareLiveResults);
   // Calculate live positions advance
   leaderboard.forEach((result) => {
-    const initialPosition = initialPositions.get(result.user_id);
+    const initialPosition = initialPositions.get(result.userId);
     if (initialPosition !== undefined) {
       result.livePositionAdvance = initialPosition - result.currentPosition;
     }
@@ -126,8 +126,8 @@ function calculatePoints(
   let accurateScores = currentPoints?.currentAccurateScores || 0;
   let liveAccurateScores = currentPoints?.currentLiveAccurateScores || 0;
 
-  const away_goals_hit = bet.away_goals === game.regularTimeScore?.away;
-  const home_goals_hit = bet.home_goals === game.regularTimeScore?.home;
+  const away_goals_hit = bet.awayGoals === game.regularTimeScore?.away;
+  const home_goals_hit = bet.homeGoals === game.regularTimeScore?.home;
   const accurate_score_hit = away_goals_hit && home_goals_hit;
   const winner_hit = bet.winner === game.regularTimeScore?.winner;
   const accurate_score_and_winner_hit =

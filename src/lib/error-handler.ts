@@ -1,5 +1,7 @@
 import { ZodError } from "zod";
 
+import { ERROR_ENUM } from "~/types/errors";
+
 export const errorHandler = (error: unknown): string => {
   let errorMsg: string;
 
@@ -12,7 +14,7 @@ export const errorHandler = (error: unknown): string => {
   } else if (typeof error === "string") {
     errorMsg = error;
   } else {
-    errorMsg = "Spróbuj ponownie za chwilę";
+    errorMsg = ERROR_ENUM.TRY_AGAIN_LATER;
   }
 
   return errorMsg;

@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { LoaderCircle } from "lucide-react";
 
 import ROUTES from "~/constants/routes";
 import { createSession } from "~/lib/auth/session";
@@ -13,6 +12,7 @@ import { errorHandler } from "~/lib/error-handler";
 import { auth } from "~/lib/firebase";
 import { loginSchema, type loginSchemaType } from "~/lib/validatorSchemas/auth";
 
+import { ButtonLoadingSpinner } from "../Loaders/button-loading-spinner";
 import { Button } from "../ui/button";
 import {
   Form,
@@ -58,7 +58,7 @@ export const LoginForm: FC = ({}) => {
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then(async (userCredential) => {
         await createSession(userCredential.user.uid).then(() =>
-          router.replace(ROUTES.games)
+          router.replace(ROUTES.games),
         );
       })
       .catch((error: unknown) => {
@@ -75,7 +75,7 @@ export const LoginForm: FC = ({}) => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         {formFields.map((formField) => (
           <FormField
-            key={formField.name}
+            key={`LoginForm-${formField.name}`}
             control={form.control}
             name={formField.name as "email" | "password"}
             render={({ field }) => (
@@ -95,9 +95,7 @@ export const LoginForm: FC = ({}) => {
         ))}
         <Button type="submit">
           Zaloguj
-          {formState.isSubmitting && (
-            <LoaderCircle className="animate-spin size-4 ml-1" />
-          )}
+          {formState.isSubmitting && <ButtonLoadingSpinner />}
         </Button>
       </form>
     </Form>

@@ -15,8 +15,8 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
   userBet,
 }) => {
   const accurateScoreHit =
-    game.regularTimeScore?.home === userBet.home_goals &&
-    game.regularTimeScore?.away === userBet.away_goals;
+    game.regularTimeScore?.home === userBet.homeGoals &&
+    game.regularTimeScore?.away === userBet.awayGoals;
   const winnerHit = game.regularTimeScore?.winner === userBet.winner;
 
   return (
@@ -27,9 +27,11 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
           <p className="text-gray-500">
             Wynik:{" "}
             <span
-              className={accurateScoreHit ? "text-green-600" : "text-destructive"}
+              className={
+                accurateScoreHit ? "text-green-600" : "text-destructive"
+              }
             >
-              {userBet.home_goals}-{userBet.away_goals}
+              {userBet.homeGoals}-{userBet.awayGoals}
             </span>
           </p>
           <p className="text-gray-500">

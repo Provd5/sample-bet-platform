@@ -3,6 +3,7 @@
 import type { FC } from "react";
 import Link from "next/link";
 
+import { CURRENT_EVENT } from "~/constants/currentEvent";
 import ROUTES from "~/constants/routes";
 
 import {
@@ -18,8 +19,6 @@ interface AuthPageProps {
   isLogin?: boolean;
   children: React.ReactNode;
 }
-
-const CURRENT_EVENT = "Euro 2024";
 
 export const AuthPage: FC<AuthPageProps> = ({ isLogin = false, children }) => {
   return (

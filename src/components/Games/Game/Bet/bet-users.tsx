@@ -8,14 +8,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "~/components/ui/alert-dialog";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselNext,
-  CarouselPrevious,
-} from "~/components/ui/carousel";
 import { Separator } from "~/components/ui/separator";
 
+import { ModalCarousel } from "../../modal-carousel";
 import { GameTeam } from "../game-team";
 import { BetCarouselItem } from "./bet-carousel-item";
 
@@ -25,35 +20,29 @@ interface BetUsersProps {
 }
 
 export const BetUsers: FC<BetUsersProps> = ({ game, bets }) => {
-  const betsForCurrentGame = bets.filter((bet) => bet.game_id === game.id);
-
   return (
     <div>
       <AlertDialogHeader>
         <AlertDialogTitle>Tak obstawili inni</AlertDialogTitle>
       </AlertDialogHeader>
-      <div className="flex flex-col sm:flex-row gap-x-2 gap-y-4 sm:items-center justify-between mb-3 mt-1">
-        {betsForCurrentGame.length > 0 ? (
-          <Carousel orientation="vertical" opts={{ dragFree: true }}>
-            <CarouselContent className="max-h-[400px] cursor-grab">
-              {betsForCurrentGame.map((userBet) => (
-                <BetCarouselItem
-                  key={`BetUsers-CarouselItem-${userBet.id}`}
-                  game={game}
-                  userBet={userBet}
-                />
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="top-auto -bottom-14 left-3" />
-            <CarouselNext className="top-auto -bottom-14 left-12" />
-          </Carousel>
+      <div className="!my-3 flex flex-col justify-between gap-x-2 gap-y-4 sm:flex-row sm:items-center">
+        {bets.length > 0 ? (
+          <ModalCarousel>
+            {bets.map((userBet) => (
+              <BetCarouselItem
+                key={`BetUsers-BetCarouselItem-${userBet.id}`}
+                game={game}
+                userBet={userBet}
+              />
+            ))}
+          </ModalCarousel>
         ) : (
           <p className="mt-1.5">Nikt nie obstawił tego meczu ☹️</p>
         )}
 
         <Separator className="sm:hidden" />
 
-        <div className="flex flex-col gap-2 items-end">
+        <div className="flex flex-col items-end gap-2">
           <div className="flex items-center gap-3">
             <GameTeam
               teamName={game.homeTeamName}

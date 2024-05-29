@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
-import { getAllGames, getAllUsersBets } from "~/lib/actions/games";
+import { getAllUsersBets } from "~/lib/actions/game-bets";
+import { getAllGames } from "~/lib/actions/games";
 import { readSessionId } from "~/lib/auth/session";
 
 import { DataTable } from "../data-table";
@@ -18,16 +19,22 @@ export const ResultsTable: FC = async ({}) => {
   const results = resultsCalculator(games, bets);
 
   return (
-    <DataTable isData={!!games.length && !!bets.length}>
+    <DataTable isData={!!games.length}>
       <>
         <TableHeader />
-        {results.map((result) => (
-          <ResultCard
-            key={`ResultCard-results-${result.user_id}`}
-            sessionId={session?.userId}
-            result={result}
-          />
-        ))}
+        {results.length > 0 ? (
+          results.map((result) => (
+            <ResultCard
+              key={`ResultsTable-ResultCard-${result.userId}`}
+              sessionId={session?.userId}
+              result={result}
+            />
+          ))
+        ) : (
+          <h1 className="text-center text-xl p-3">
+            Nikt jeszcze nic nie obstawił ☹️
+          </h1>
+        )}
       </>
     </DataTable>
   );

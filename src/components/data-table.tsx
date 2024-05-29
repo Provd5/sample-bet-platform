@@ -10,11 +10,11 @@ interface DataTableProps {
 
 export const DataTable: FC<DataTableProps> = ({ children, isData }) => {
   return (
-    <div className="py-12 flex-col flex items-center">
+    <div className="py-12 px-3 flex-col flex items-center">
       {!isData ? (
         <DataLoadError />
       ) : (
-        <div className="flex flex-col gap-12 w-full">
+        <div className="flex flex-col gap-6 w-full">
           <RefreshButton />
           <div className="flex flex-col divide-y divide-y-gray-500/10 w-full">
             {children}

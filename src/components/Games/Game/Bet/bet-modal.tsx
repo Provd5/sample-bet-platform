@@ -1,7 +1,8 @@
-import type { FC } from "react";
+import { type FC, Suspense } from "react";
 
 import { type BetInterface, type GameInterface } from "~/types/games";
 
+import { ModalContentLoader } from "~/components/Loaders/modal-content-loader";
 import {
   AlertDialog,
   AlertDialogContent,
@@ -9,29 +10,23 @@ import {
 } from "~/components/ui/alert-dialog";
 
 import { GameCard } from "../game-card";
-import { BetGame } from "./bet-game";
-import { BetUsers } from "./bet-users";
+import { Bet } from "./bet";
 
 interface BetModalProps {
   sessionBet: BetInterface | undefined;
   game: GameInterface;
-  bets: BetInterface[];
 }
 
-export const BetModal: FC<BetModalProps> = ({ sessionBet, game, bets }) => {
-  const notStarted = game.status === "TIMED";
-
+export const BetModal: FC<BetModalProps> = ({ sessionBet, game }) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger className="w-full">
         <GameCard game={game} sessionBet={sessionBet} />
       </AlertDialogTrigger>
       <AlertDialogContent>
-        {notStarted ? (
-          <BetGame game={game} sessionBet={sessionBet} />
-        ) : (
-          <BetUsers game={game} bets={bets} />
-        )}
+        <Suspense key={"bet-suspense"} fallback={<ModalContentLoader />}>
+          <Bet game={game} sessionBet={sessionBet} />
+        </Suspense>
       </AlertDialogContent>
     </AlertDialog>
   );

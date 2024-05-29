@@ -1,36 +1,35 @@
-import type { FC } from "react";
+import { type FC, Suspense } from "react";
 
-import {
-  getAllGames,
-  getAllUsersBets,
-  getSessionBets,
-} from "~/lib/actions/games";
+import { getSessionBets } from "~/lib/actions/game-bets";
+import { getAllGames } from "~/lib/actions/games";
 
 import { DataTable } from "../data-table";
+import { FinalsLoader } from "../Loaders/finals-loader";
+import { Finals } from "./Finals/finals";
 import { BetModal } from "./Game/Bet/bet-modal";
 
 export const GamesTable: FC = async ({}) => {
-  const [games, bets, sessionBets] = await Promise.all([
+  const [games, sessionBets] = await Promise.all([
     getAllGames(),
-    getAllUsersBets(),
     getSessionBets(),
   ]);
 
   return (
-    <DataTable isData={!!games.length && !!bets.length}>
-      {games &&
-        games.map((game) => {
-          const sessionBet = sessionBets.find((bet) => bet.game_id === game.id);
+    <DataTable isData={!!games.length}>
+      <Suspense key={"finals-suspense"} fallback={<FinalsLoader />}>
+        <Finals />
+      </Suspense>
+      {games.map((game) => {
+        const sessionBet = sessionBets.find((bet) => bet.gameId === game.id);
 
-          return (
-            <BetModal
-              key={`GamesTable-BetModal-${game.id}`}
-              sessionBet={sessionBet}
-              game={game}
-              bets={bets}
-            />
-          );
-        })}
+        return (
+          <BetModal
+            key={`GamesTable-BetModal-${game.id}`}
+            game={game}
+            sessionBet={sessionBet}
+          />
+        );
+      })}
     </DataTable>
   );
 };

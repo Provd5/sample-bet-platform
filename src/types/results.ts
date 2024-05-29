@@ -1,12 +1,12 @@
 export interface PointsInterface {
   currentPoints: number;
-  currentLivePoints: number,
-  currentAccurateScores: number,
-  currentLiveAccurateScores: number
+  currentLivePoints: number;
+  currentAccurateScores: number;
+  currentLiveAccurateScores: number;
 }
 
 export interface ResultInterface {
-  user_id: string;
+  userId: string;
   username: string;
   points: PointsInterface;
   currentPosition: number;

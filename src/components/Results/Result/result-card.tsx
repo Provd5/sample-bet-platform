@@ -18,7 +18,7 @@ export const ResultCard: FC<ResultCardProps> = ({ sessionId, result }) => {
     (result.currentPosition === 3 && "🥉") ||
     null;
 
-  const sessionResult = sessionId === result.user_id;
+  const sessionResult = sessionId === result.userId;
 
   const accurateScoreAdvance =
     result.points.currentLiveAccurateScores -

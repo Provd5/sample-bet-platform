@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import { CircleCheckBig } from "lucide-react";
 
 import { type BetInterface, type GameInterface } from "~/types/games";
 
+import { BetMade } from "~/components/bet-made";
 import {
   cn,
   getMatchWinnerName,
@@ -69,7 +69,7 @@ export const GameCard: FC<GameCardProps> = ({ game, sessionBet }) => {
           <div className="flex gap-x-3 md:flex-row flex-col">
             <p
               className={cn(
-                "self-start ,d:self-end",
+                "self-start md:self-end",
                 game.stage === "FINAL" &&
                   "font-semibold dark:text-orange-500 text-orange-600",
                 game.stage === "SEMI_FINALS" &&
@@ -80,14 +80,12 @@ export const GameCard: FC<GameCardProps> = ({ game, sessionBet }) => {
               {translateConstantsToPolish(game.stage)}
             </p>
             {!!sessionBet && (
-              <p className="flex flex-col text-sm -mt-1.5 md:-mt-0">
-                <span className="flex gap-1 items-center">
-                  Obstawiono! <CircleCheckBig className="size-4 shrink-0" />
-                </span>
-                <span className="flex -mt-1.5">{`(${sessionBet.home_goals} - ${
-                  sessionBet.away_goals
-                }, ${getMatchWinnerName(sessionBet.winner, game)})`}</span>
-              </p>
+              <div className="flex flex-col text-sm -mt-1.5 md:-mt-0">
+                <BetMade />
+                <p className="flex -mt-1.5">{`(${sessionBet.homeGoals} - ${
+                  sessionBet.awayGoals
+                }, ${getMatchWinnerName(sessionBet.winner, game)})`}</p>
+              </div>
             )}
           </div>
           <GameDate timestamp={game.timestamp} />

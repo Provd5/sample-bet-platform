@@ -12,7 +12,7 @@ interface TableLoaderProps {
 export const TableLoader: FC<TableLoaderProps> = ({ variant }) => {
   return (
     <DataTable isData>
-      {variant === "results" && <TableHeader />}
+      {variant === "games" ? <div className="h-[56px]" /> : <TableHeader />}
       {Array.from({ length: 100 }).map((_, i) => (
         <div
           key={`TableLoader-${i}`}

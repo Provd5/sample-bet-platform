@@ -7,7 +7,7 @@ export const fetchGames = async (): Promise<GameInterface[]> => {
   const file = await fs.readFile(process.cwd() + filePath, "utf8");
   const data = JSON.parse(file) as GameInterface[];
 
-  return data.reverse();
+  return data;
 };
 
 export const fetchBets = async (): Promise<BetInterface[]> => {

@@ -50,10 +50,10 @@ export interface GameInterface {
 export interface BetInterface {
   id: string;
   username: string;
-  user_id: string;
-  game_id: GameInterface["id"];
-  away_goals: number;
-  home_goals: number;
+  userId: string;
+  gameId: GameInterface["id"];
+  awayGoals: number;
+  homeGoals: number;
   winner: MatchWinner;
-  game_stage: MatchStage;
+  gameStage: MatchStage;
 }

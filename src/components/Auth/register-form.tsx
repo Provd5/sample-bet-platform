@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
-import { LoaderCircle } from "lucide-react";
 
 import { ERROR_ENUM } from "~/types/errors";
 
@@ -19,6 +18,7 @@ import {
   type registerSchemaType,
 } from "~/lib/validatorSchemas/auth";
 
+import { ButtonLoadingSpinner } from "../Loaders/button-loading-spinner";
 import { Button } from "../ui/button";
 import {
   Form,
@@ -118,7 +118,7 @@ export const RegisterForm: FC = ({}) => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         {formFields.map((formField) => (
           <FormField
-            key={formField.name}
+            key={`RegisterForm-${formField.name}`}
             control={form.control}
             name={
               formField.name as
@@ -147,9 +147,7 @@ export const RegisterForm: FC = ({}) => {
         ))}
         <Button type="submit">
           Stwórz konto
-          {formState.isSubmitting && (
-            <LoaderCircle className="ml-1 animate-spin size-4" />
-          )}
+          {formState.isSubmitting && <ButtonLoadingSpinner />}
         </Button>
       </form>
     </Form>
