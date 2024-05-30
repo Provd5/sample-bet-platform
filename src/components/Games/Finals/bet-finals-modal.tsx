@@ -1,4 +1,5 @@
 import { type FC, Suspense } from "react";
+import { Trophy } from "lucide-react";
 
 import { type BetFinalsInterface } from "~/types/teams";
 
@@ -29,6 +30,7 @@ export const BetFinalsModal: FC<BetFinalsModalProps> = ({
           )}
         >
           Finaliści
+          <Trophy className="ml-1 size-4 shrink-0" />
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>

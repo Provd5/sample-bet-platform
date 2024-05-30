@@ -24,7 +24,7 @@ export const getAllGames = cache(
       const dbRef = ref(realtimeDb);
       const queryRef = query(
         child(dbRef, `matches/`),
-        orderByChild("timestamp")
+        orderByChild("timestamp"),
       );
       const games = await get(queryRef);
 
@@ -38,10 +38,10 @@ export const getAllGames = cache(
         isArray
           ? snapshotValue.filter((game) => game !== null)
           : isObject
-          ? Object.entries(snapshotValue)
-              .map(([_, value]) => value as GameInterface)
-              .filter((game) => game !== null)
-          : []
+            ? Object.entries(snapshotValue)
+                .map(([_, value]) => value as GameInterface)
+                .filter((game) => game !== null)
+            : []
       ) as GameInterface[];
 
       requiredFields.forEach((field) => {
@@ -49,7 +49,24 @@ export const getAllGames = cache(
           throw new Error(`No ${field} field`);
       });
 
-      return gamesData;
+      // IN_PLAY and PAUSED games always on top
+      const sortedGames = gamesData.sort((a, b) => {
+        if (
+          (a.status === "IN_PLAY" || a.status === "PAUSED") &&
+          b.status !== "IN_PLAY" &&
+          b.status !== "PAUSED"
+        )
+          return -1;
+        if (
+          a.status !== "IN_PLAY" &&
+          a.status !== "PAUSED" &&
+          (b.status === "IN_PLAY" || b.status === "PAUSED")
+        )
+          return 1;
+        return 0;
+      });
+
+      return sortedGames;
     } catch (e) {
       console.log(e);
       return [];
@@ -59,5 +76,5 @@ export const getAllGames = cache(
   {
     tags: ["cache-getAllGames"],
     revalidate: 120, // revalidate every 2 minutes
-  }
+  },
 );

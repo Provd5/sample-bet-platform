@@ -3,7 +3,7 @@
 import type { FC } from "react";
 import Link from "next/link";
 
-import { CURRENT_EVENT } from "~/constants/currentEvent";
+import { CURRENT_EVENT } from "~/constants/current-event";
 import ROUTES from "~/constants/routes";
 
 import {
@@ -23,7 +23,7 @@ interface AuthPageProps {
 export const AuthPage: FC<AuthPageProps> = ({ isLogin = false, children }) => {
   return (
     <div className="flex size-full items-center">
-      <div className="max-w-lg mx-auto px-6 mt-6 mb-12 w-full h-fit">
+      <div className="mx-auto mb-12 mt-6 h-fit w-full max-w-lg px-6">
         <Card>
           <CardHeader>
             <CardTitle>{isLogin ? "Zaloguj się" : "Utwórz konto"}</CardTitle>

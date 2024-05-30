@@ -13,7 +13,7 @@ export const Logout: FC = ({}) => {
 
   return (
     <Button
-      className="flex-row-reverse gap-2 items-center border border-input"
+      className="flex-row-reverse items-center gap-2 border border-input"
       variant={"secondary"}
       onClick={() => (
         toast({
@@ -24,7 +24,7 @@ export const Logout: FC = ({}) => {
         logOut()
       )}
     >
-      <LogOut className="size-4" />
+      <LogOut className="size-4 shrink-0" />
       <span>Wyloguj</span>
     </Button>
   );

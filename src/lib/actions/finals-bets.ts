@@ -6,7 +6,7 @@ import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { ERROR_ENUM } from "~/types/errors";
 import { type BetFinalsInterface } from "~/types/teams";
 
-import { FINALS_BETTING_CLOSING_DATE } from "~/constants/currentEvent";
+import { FINALS_BETTING_CLOSING_DATE } from "~/constants/current-event";
 
 import { readSessionId } from "../auth/session";
 import { errorHandler } from "../error-handler";
@@ -25,7 +25,7 @@ export const getSessionFinalsBet =
 
       const fetchFn = cache(
         async (userId: string) => {
-          const finalsRef = doc(db, "finals", userId);
+          const finalsRef = doc(db, "finals", `${userId}_finals`);
           const finalsBet = await getDoc(finalsRef);
 
           if (!finalsBet.exists()) return null;
@@ -37,7 +37,7 @@ export const getSessionFinalsBet =
         ["cache-getSessionFinalsBet"],
         {
           tags: ["cache-getSessionFinalsBet"],
-        }
+        },
       );
 
       const bets = await fetchFn(session.userId);
@@ -57,7 +57,7 @@ export const getAllUsersFinalsBets = cache(
       if (finalsBets.empty) return [];
 
       const finalsArray = finalsBets.docs.map((doc) =>
-        doc.data()
+        doc.data(),
       ) as BetFinalsInterface[];
 
       return finalsArray;
@@ -70,11 +70,11 @@ export const getAllUsersFinalsBets = cache(
   {
     tags: ["cache-getAllUsersFinalsBets"],
     revalidate: 120, // revalidate every 2 minutes
-  }
+  },
 );
 
 export const betFinals = async (
-  values: betFinalsSchemaType
+  values: betFinalsSchemaType,
 ): Promise<{ success: boolean; errorMsg?: string }> => {
   try {
     const validValues = betFinalsSchema.parse(values);
@@ -97,9 +97,10 @@ export const betFinals = async (
     const user = await getUser(session.userId);
     if (!user) return { success: false, errorMsg: ERROR_ENUM.UNAUTHORIZED };
 
-    const betsRef = doc(db, "finals", session.userId);
+    const betsRef = doc(db, "finals", `${session.userId}_finals`);
 
     await setDoc(betsRef, {
+      userId: session.userId,
       username: user.username,
       teamBet: validValues.teams,
     });

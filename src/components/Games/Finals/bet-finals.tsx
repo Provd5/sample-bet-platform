@@ -3,7 +3,7 @@ import { type FC } from "react";
 import { type BetFinalsInterface } from "~/types/teams";
 
 import { DataLoadError } from "~/components/data-load-error";
-import { FINALS_BETTING_CLOSING_DATE } from "~/constants/currentEvent";
+import { FINALS_BETTING_CLOSING_DATE } from "~/constants/current-event";
 import { getAllUsersFinalsBets } from "~/lib/actions/finals-bets";
 import { getAllTeams } from "~/lib/actions/teams";
 

@@ -19,7 +19,7 @@ import {
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { useToast } from "~/components/ui/use-toast";
-import { FINALS_BETTING_CLOSING_DATE } from "~/constants/currentEvent";
+import { FINALS_BETTING_CLOSING_DATE } from "~/constants/current-event";
 import { betFinals } from "~/lib/actions/finals-bets";
 import { errorHandler } from "~/lib/error-handler";
 import { cn, dateFormat } from "~/lib/utils";

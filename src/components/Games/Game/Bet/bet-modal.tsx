@@ -20,7 +20,9 @@ interface BetModalProps {
 export const BetModal: FC<BetModalProps> = ({ sessionBet, game }) => {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="w-full">
+      <AlertDialogTrigger
+        className={`GAME_${game.status === "TIMED" ? "OPEN" : "CLOSED"} hidden w-full`}
+      >
         <GameCard game={game} sessionBet={sessionBet} />
       </AlertDialogTrigger>
       <AlertDialogContent>

@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { Award, CircleUser, Goal } from "lucide-react";
 
-import { CURRENT_EVENT } from "~/constants/currentEvent";
+import { CURRENT_EVENT } from "~/constants/current-event";
 import ROUTES from "~/constants/routes";
 import { getUser } from "~/lib/actions/users";
 import { readSessionId } from "~/lib/auth/session";
@@ -19,21 +19,21 @@ export const NavigationLinks: FC = async ({}) => {
   return (
     <>
       <div className="mr-auto flex flex-col">
-        <h1 className="text-sm font-semibold -mb-1">{CURRENT_EVENT}</h1>
-        <h1 className="flex gap-1 items-center">
+        <h1 className="-mb-1 text-sm font-semibold">{CURRENT_EVENT}</h1>
+        <h1 className="flex items-center gap-1">
           <CircleUser className="size-5" />
-          <span className="font-bold text-lg">{user?.username}</span>
+          <span className="text-lg font-bold">{user?.username}</span>
         </h1>
       </div>
 
       <nav>
-        <div className="flex flex-wrap justify-end gap-1 items-center">
+        <div className="flex flex-wrap items-center justify-end gap-1">
           <NavigationLink href={ROUTES.games}>
-            <Goal className="size-4" />
+            <Goal className="size-4 shrink-0" />
             <span>Mecze</span>
           </NavigationLink>
           <NavigationLink href={ROUTES.results}>
-            <Award className="size-4" />
+            <Award className="size-4 shrink-0" />
             <span>Punktacja</span>
           </NavigationLink>
           <Logout />

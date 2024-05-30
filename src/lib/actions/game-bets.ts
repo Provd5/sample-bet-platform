@@ -44,7 +44,7 @@ export const getSessionBets = async (): Promise<BetInterface[]> => {
       ["cache-getSessionBets"],
       {
         tags: ["cache-getSessionBets"],
-      }
+      },
     );
 
     const bets = await fetchFn(session.userId);
@@ -55,7 +55,7 @@ export const getSessionBets = async (): Promise<BetInterface[]> => {
   }
 };
 
-export const getUsersBets = cache(
+export const getGameBets = cache(
   async (gameId: string | number): Promise<BetInterface[]> => {
     try {
       const betsRef = collection(db, "bets");
@@ -72,11 +72,11 @@ export const getUsersBets = cache(
       return [];
     }
   },
-  ["cache-getUsersBets"],
+  ["cache-getGameBets"],
   {
-    tags: ["cache-getUsersBets"],
+    tags: ["cache-getGameBets"],
     revalidate: 120, // revalidate every 2 minutes
-  }
+  },
 );
 
 export const getAllUsersBets = cache(
@@ -99,12 +99,12 @@ export const getAllUsersBets = cache(
   {
     tags: ["cache-getAllUsersBets"],
     revalidate: 120, // revalidate every 2 minutes
-  }
+  },
 );
 
 export const betGame = async (
   values: betSchemaType,
-  gameValues: betGameSchemaType
+  gameValues: betGameSchemaType,
 ): Promise<{ success: boolean; errorMsg?: string }> => {
   try {
     const validValues = betSchema.parse(values);
@@ -131,7 +131,7 @@ export const betGame = async (
     const betsRef = doc(
       db,
       "bets",
-      `${session.userId}_${validGameValues.gameId}`
+      `${session.userId}_${validGameValues.gameId}`,
     );
 
     await setDoc(betsRef, {
