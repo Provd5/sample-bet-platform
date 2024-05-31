@@ -19,8 +19,7 @@ export function calculateFinals(
 
     if (userResultsMap.has(bet.userId)) {
       const existingUser = userResultsMap.get(bet.userId);
-      existingUser!.points.currentPoints = points.currentPoints;
-      existingUser!.points.currentLivePoints = points.currentLivePoints;
+      existingUser!.points = points;
     } else {
       userResultsMap.set(bet.userId, {
         userId: bet.userId,
