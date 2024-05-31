@@ -14,11 +14,13 @@ import {
 import { Button } from "./ui/button";
 
 const rules = [
-  "Wpisowe 30 zł na nagrodę dla pierwszych trzech miejsc.",
+  "Wpisowe 50 zł na nagrodę dla pierwszych trzech miejsc.",
   "Za poprawne wytypowanie zwycięzcy: +1pkt.",
   "Za poprawne wytypowanie dokładnego wyniku: +2pkt.",
   "Dokładny wynik można postawić niezależnie na kogo obstawiło się zwycięzce.",
+  "Zakład bonusowy: Za wytypowanie finalisty: +3pkt (max 6pkt).",
   "Wygrywa osoba która zgarnie najwięcej punktów, w przypadku remisu rozstrzyga najwięcej trafień dokładnych wyników.",
+  "Zakład bonusowy należy postawić przed rozpoczęciem turnieju. Podział nagród: 50%/30%/20%",
 ];
 
 export const Rules: FC = ({ }) => {
