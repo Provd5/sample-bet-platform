@@ -6,12 +6,13 @@ import { ACCURATE_FINALS_TEAM_POINTS } from "../constants";
 
 export function calculateFinalsPoints(
   currentPoints: PointsInterface | undefined,
-  teamBet: BetFinalsInterface["teamBet"] | undefined,
+  teamBet: BetFinalsInterface["teamBet"],
   finalGame: GameInterface,
-): number {
-  if (!teamBet || !teamBet.length) return 0;
-
+): PointsInterface {
   let points = currentPoints?.currentPoints || 0;
+  let livePoints = currentPoints?.currentLivePoints || 0;
+  const accurateScores = currentPoints?.currentAccurateScores || 0;
+  const liveAccurateScores = currentPoints?.currentLiveAccurateScores || 0;
 
   const finals_team_hit = teamBet.some(
     (bet) =>
@@ -25,10 +26,19 @@ export function calculateFinalsPoints(
   );
   if (finals_team_hit) {
     points += ACCURATE_FINALS_TEAM_POINTS;
+    livePoints += ACCURATE_FINALS_TEAM_POINTS;
   }
   if (double_finals_team_hit) {
     points += ACCURATE_FINALS_TEAM_POINTS;
+    livePoints += ACCURATE_FINALS_TEAM_POINTS;
   }
 
-  return points;
+  const newPoints: PointsInterface = {
+    currentPoints: points,
+    currentLivePoints: livePoints,
+    currentAccurateScores: accurateScores,
+    currentLiveAccurateScores: liveAccurateScores,
+  };
+
+  return newPoints;
 }
