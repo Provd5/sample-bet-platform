@@ -1,6 +1,6 @@
 import { type ResultInterface } from "~/types/results";
 
-export function calculateLeaderboardPositions(
+export function calculatePositions(
   results: ResultInterface[],
   comparator: (a: ResultInterface, b: ResultInterface) => number,
 ) {
