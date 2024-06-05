@@ -14,7 +14,6 @@ import {
 import { Button } from "./ui/button";
 
 const rules = [
-  "Wpisowe 50 zł na nagrodę dla pierwszych trzech miejsc. Podział nagród: 🥇60%🥈25%🥉15%",
   "Za poprawne wytypowanie zwycięzcy: +1pkt.",
   "Za poprawne wytypowanie dokładnego wyniku: +2pkt.",
   "Dokładny wynik można postawić niezależnie na kogo obstawiło się zwycięzce.",
@@ -24,7 +23,7 @@ const rules = [
   "Zakład bonusowy należy postawić przed rozpoczęciem turnieju. Zakłady na mecze do planowego rozpoczęcia meczu.",
 ];
 
-export const Rules: FC = ({ }) => {
+export const Rules: FC = ({}) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
