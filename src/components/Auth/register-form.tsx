@@ -39,6 +39,7 @@ const formFields = [
     label: "Nazwa",
     placeholder: "Wpisz swoją nazwę",
     description: "Twoja nazwa widoczna dla innych użytkowników.",
+    autoComplete: "username",
   },
   {
     name: "email",
@@ -46,6 +47,7 @@ const formFields = [
     label: "Adres e-mail",
     placeholder: "Wpisz adres e-mail",
     description: "Będziesz go potrzebował do zalogowania się.",
+    autoComplete: "email",
   },
   {
     name: "password",
@@ -53,6 +55,7 @@ const formFields = [
     label: "Hasło",
     placeholder: "Podaj hasło",
     description: "Minimum 6 znaków.",
+    autoComplete: "new-password",
   },
   {
     name: "repeat_password",
@@ -60,6 +63,7 @@ const formFields = [
     label: "Powtórz hasło",
     placeholder: "Powtórz hasło",
     description: null,
+    autoComplete: "new-password",
   },
 ];
 
@@ -134,6 +138,7 @@ export const RegisterForm: FC = ({}) => {
                   <Input
                     type={formField.type}
                     placeholder={formField.placeholder}
+                    autoComplete={formField.autoComplete}
                     {...field}
                   />
                 </FormControl>

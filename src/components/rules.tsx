@@ -5,7 +5,6 @@ import {
   AlertDialog,
   AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
@@ -24,7 +23,7 @@ const rules = [
   "Zakład bonusowy należy postawić przed rozpoczęciem turnieju. Zakłady na mecze do planowego rozpoczęcia meczu.",
 ];
 
-export const Rules: FC = ({ }) => {
+export const Rules: FC = ({}) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
@@ -36,14 +35,15 @@ export const Rules: FC = ({ }) => {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Zasady:</AlertDialogTitle>
-          <AlertDialogDescription>
-            {rules.map((rule, index) => (
-              <p className="py-1 leading-tight" key={`Rules-rules-${index}`}>
-                <span className="font-bold">{`${index + 1}. `}</span>
-                {rule}
-              </p>
-            ))}
-          </AlertDialogDescription>
+          {rules.map((rule, index) => (
+            <p
+              className="py-1 text-sm leading-tight text-muted-foreground"
+              key={`Rules-rules-${index}`}
+            >
+              <span className="font-bold">{`${index + 1}. `}</span>
+              {rule}
+            </p>
+          ))}
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Zamknij</AlertDialogCancel>

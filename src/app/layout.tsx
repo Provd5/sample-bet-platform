@@ -24,7 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" suppressHydrationWarning>
-      <body className={cn(inter.className, "flex flex-col overflow-x-hidden")}>
+      <body
+        className={cn(
+          inter.className,
+          "relative flex h-auto min-h-screen flex-col overflow-x-hidden",
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -32,7 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavigationBar />
-          <main className="h-full relative">{children}</main>
+          <main className="h-full">{children}</main>
 
           <Toaster />
         </ThemeProvider>
