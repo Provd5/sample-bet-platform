@@ -31,7 +31,7 @@ export const GoalsInput: FC<GoalsInputProps> = ({
 
   return (
     <div className="flex flex-col items-center gap-0.5">
-      <div className="flex gap-1 items-center">
+      <div className="flex items-center gap-1">
         <Image
           src={teamIcon}
           alt={`${teamName} icon`}
@@ -43,14 +43,16 @@ export const GoalsInput: FC<GoalsInputProps> = ({
           {teamSide === "AWAY_TEAM" ? "Gole gości:" : "Gole gospodarzy:"}
         </p>
       </div>
-      <div className="flex gap-1 items-center">
+      <div className="flex items-center gap-1">
         <Button
           type="button"
           variant={"outline"}
           className="size-9"
           onClick={() => (
             setValueState((prev) => (prev > 0 ? prev - 1 : 0)),
-            setValue(registerTeam, valueState > 0 ? valueState - 1 : 0)
+            setValue(registerTeam, valueState > 0 ? valueState - 1 : 0, {
+              shouldDirty: true,
+            })
           )}
         >
           <Minus className="size-5 shrink-0" />
@@ -68,7 +70,7 @@ export const GoalsInput: FC<GoalsInputProps> = ({
           className="size-9"
           onClick={() => (
             setValueState((prev) => prev + 1),
-            setValue(registerTeam, valueState + 1)
+            setValue(registerTeam, valueState + 1, { shouldDirty: true })
           )}
         >
           <Plus className="size-5 shrink-0" />

@@ -46,7 +46,7 @@ export const BetTeam: FC<BetTeamProps> = ({
         value={userData.winner}
         className="hidden"
       />
-      <h1 className="sm:self-end self-center text-sm text-gray-500">
+      <h1 className="self-center text-sm text-gray-500 sm:self-end">
         Wygrany:
       </h1>
       <div className="flex flex-col gap-1 max-sm:w-full">
@@ -68,7 +68,7 @@ export const BetTeam: FC<BetTeamProps> = ({
         </ToggleGroupItem>
         <ToggleGroupItem
           type="button"
-          className="w-full justify-center sm:justify-end gap-2"
+          className="w-full justify-center gap-2 sm:justify-end"
           value="DRAW"
         >
           Remis <CircleEqual className="size-[30px]" />

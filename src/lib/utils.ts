@@ -14,12 +14,17 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function dateFormat(timestamp: number): string {
-  return formatInTimeZone(new Date(timestamp), 'Europe/Warsaw', "EEEE HH:mm | dd/MM/yyyy", { locale: pl });
+  return formatInTimeZone(
+    new Date(timestamp),
+    "Europe/Warsaw",
+    "EEEE HH:mm | dd/MM/yyyy",
+    { locale: pl },
+  );
 }
 
 export function getMatchWinnerName(
   matchWinner: MatchWinner,
-  game: GameInterface
+  game: GameInterface,
 ): string {
   switch (matchWinner) {
     case "AWAY_TEAM":
@@ -32,7 +37,7 @@ export function getMatchWinnerName(
 }
 
 export function translateConstantsToPolish(
-  constant: constantsToTranslate
+  constant: constantsToTranslate,
 ): string {
   switch (constant) {
     case "HOME_TEAM":
