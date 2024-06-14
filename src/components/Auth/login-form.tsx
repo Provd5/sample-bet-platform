@@ -31,12 +31,14 @@ const formFields = [
     type: "email",
     label: "Adres e-mail",
     placeholder: "Wpisz adres e-mail",
+    autoComplete: "email",
   },
   {
     name: "password",
     type: "password",
     label: "Hasło",
     placeholder: "Podaj hasło",
+    autoComplete: "current-password",
   },
 ];
 
@@ -83,6 +85,7 @@ export const LoginForm: FC = ({}) => {
                 <FormLabel>{formField.label}</FormLabel>
                 <FormControl>
                   <Input
+                    autoComplete={formField.autoComplete}
                     type={formField.type}
                     placeholder={formField.placeholder}
                     {...field}

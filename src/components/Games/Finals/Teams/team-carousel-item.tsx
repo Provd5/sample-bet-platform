@@ -24,7 +24,7 @@ export const TeamCarouselItem: FC<TeamCarouselItemProps> = ({
 
   return (
     <CarouselItem className="select-none">
-      <div className="flex gap-3 items-center">
+      <div className="flex items-center gap-3">
         {canBet || isInBet ? (
           <Button
             className="size-9"
@@ -44,17 +44,17 @@ export const TeamCarouselItem: FC<TeamCarouselItemProps> = ({
           <div className="size-9 shrink-0" />
         )}
         <div
-          className={cn("w-full rounded-sm flex", isInBet && "bg-gray-500/10")}
+          className={cn("flex w-full rounded-sm", isInBet && "bg-gray-500/10")}
         >
-          <div className="py-1.5 px-3 flex gap-3 items-center">
+          <div className="flex items-center gap-3 px-3 py-1.5">
             <Image
               alt={`${team.name} Icon`}
               src={team.icon}
-              height={20}
-              width={20}
+              height={30}
+              width={30}
               className="size-[30px] object-contain"
             />
-            <h1 className="truncate max-w-[260px]">{`${team.name} (${team.nameCode})`}</h1>
+            <h1 className="max-w-[260px] truncate">{`${team.name} (${team.nameCode})`}</h1>
           </div>
         </div>
       </div>
