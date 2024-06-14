@@ -1,5 +1,5 @@
 import { type ClassValue, clsx } from "clsx";
-import { format } from "date-fns";
+import { formatInTimeZone } from "date-fns-tz";
 import { pl } from "date-fns/locale";
 import { twMerge } from "tailwind-merge";
 
@@ -14,7 +14,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function dateFormat(timestamp: number): string {
-  return format(new Date(timestamp), "EEEE HH:mm | dd/MM/yyyy", { locale: pl });
+  return formatInTimeZone(new Date(timestamp), 'Europe/Warsaw', "EEEE HH:mm | dd/MM/yyyy", { locale: pl });
 }
 
 export function getMatchWinnerName(
