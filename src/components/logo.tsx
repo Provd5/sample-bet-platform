@@ -22,7 +22,10 @@ export const Logo: FC<LogoProps> = ({ size = "default", className }) => {
       alt="logo"
       width={sizeNumber[size].w}
       height={sizeNumber[size].h}
-      className={cn(`size-auto object-contain`, className)}
+      className={cn(
+        `w-${sizeNumber[size].w} h-${sizeNumber[size].h} object-contain`,
+        className,
+      )}
       priority
     />
   );
