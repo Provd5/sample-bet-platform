@@ -16,6 +16,6 @@ export const FinalsTeams: FC<FinalsTeamsProps> = ({ teams }) => {
   });
 
   return (
-    <p className="leading-tight">{`${sortedTeams[0].teamName} - ${sortedTeams[1].teamName}`}</p>
+    <p className="leading-tight text-gray-500">{`${sortedTeams[0].teamName} - ${sortedTeams[1].teamName}`}</p>
   );
 };
