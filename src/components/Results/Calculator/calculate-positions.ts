@@ -11,8 +11,8 @@ export function calculatePositions(
     if (index > 0 && comparator(results[index - 1], result) === 0) {
       result.currentPosition = results[index - 1].currentPosition;
     } else {
+      currentPosition = index + 1;
       result.currentPosition = currentPosition;
-      currentPosition = index + 2;
     }
   });
 }
