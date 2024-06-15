@@ -17,9 +17,9 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
   const accurateScoreHit =
     game.regularTimeScore?.home === userBet.homeGoals &&
     game.regularTimeScore?.away === userBet.awayGoals;
-  const scoreInPlay = game.regularTimeScore
+  const scoreInPlay = game.regularTimeScore && (game.status === "IN_PLAY" || game.status === "PAUSED")
     ? game.regularTimeScore?.home <= userBet.homeGoals &&
-      game.regularTimeScore?.away <= userBet.awayGoals
+    game.regularTimeScore?.away <= userBet.awayGoals
     : false;
   const winnerHit = game.regularTimeScore?.winner === userBet.winner;
 
