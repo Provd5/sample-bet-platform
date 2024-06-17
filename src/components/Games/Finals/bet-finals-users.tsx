@@ -37,7 +37,7 @@ export const BetFinalsUsers: FC<BetFinalsUsersProps> = ({ finalsBets }) => {
         )}
       </div>
       <AlertDialogFooter>
-        <AlertDialogCancel>Zamknij</AlertDialogCancel>
+        <AlertDialogCancel className="self-end">Zamknij</AlertDialogCancel>
       </AlertDialogFooter>
     </div>
   );

@@ -14,13 +14,16 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
   game,
   userBet,
 }) => {
+  const isGameInPlay = game.status === "IN_PLAY" || game.status === "PAUSED";
+
   const accurateScoreHit =
     game.regularTimeScore?.home === userBet.homeGoals &&
     game.regularTimeScore?.away === userBet.awayGoals;
-  const scoreInPlay = game.regularTimeScore && (game.status === "IN_PLAY" || game.status === "PAUSED")
-    ? game.regularTimeScore?.home <= userBet.homeGoals &&
-    game.regularTimeScore?.away <= userBet.awayGoals
-    : false;
+  const scoreInPlay =
+    game.regularTimeScore && isGameInPlay
+      ? game.regularTimeScore.home <= userBet.homeGoals &&
+        game.regularTimeScore.away <= userBet.awayGoals
+      : false;
   const winnerHit = game.regularTimeScore?.winner === userBet.winner;
 
   return (
@@ -44,7 +47,15 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
           </p>
           <p className="text-gray-500">
             Zwycięzca:{" "}
-            <span className={winnerHit ? "text-green-600" : "text-destructive"}>
+            <span
+              className={
+                winnerHit
+                  ? "text-green-600"
+                  : isGameInPlay
+                    ? "text-yellow-600"
+                    : "text-destructive"
+              }
+            >
               {getMatchWinnerName(userBet.winner, game)}
             </span>
           </p>

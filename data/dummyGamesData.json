@@ -16,7 +16,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1691780400000,
     "winner": "AWAY_TEAM"
   },
@@ -163,7 +163,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1691931600000,
     "winner": "DRAW"
   },
@@ -352,7 +352,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1692536400000,
     "winner": "HOME_TEAM"
   },
@@ -1129,7 +1129,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1695495600000,
     "winner": "AWAY_TEAM"
   },
@@ -1150,7 +1150,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1695560400000,
     "winner": "DRAW"
   },
@@ -1171,7 +1171,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "PAUSED",
     "timestamp": 1695560400000,
     "winner": "HOME_TEAM"
   },
@@ -1738,7 +1738,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "PAUSED",
     "timestamp": 1697896800000,
     "winner": "HOME_TEAM"
   },
@@ -2368,7 +2368,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "CANCELLED",
     "timestamp": 1699714800000,
     "winner": "AWAY_TEAM"
   },
@@ -2494,7 +2494,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "CANCELLED",
     "timestamp": 1699797600000,
     "winner": "HOME_TEAM"
   },
@@ -2599,7 +2599,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "PAUSED",
     "timestamp": 1700924400000,
     "winner": "HOME_TEAM"
   },
@@ -2683,7 +2683,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "CANCELLED",
     "timestamp": 1701007200000,
     "winner": "AWAY_TEAM"
   },
@@ -2830,7 +2830,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "CANCELLED",
     "timestamp": 1701547200000,
     "winner": "HOME_TEAM"
   },
@@ -3019,7 +3019,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "CANCELLED",
     "timestamp": 1701891000000,
     "winner": "HOME_TEAM"
   },
@@ -3103,7 +3103,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "TIMED",
     "timestamp": 1701893700000,
     "winner": "HOME_TEAM"
   },
@@ -3229,7 +3229,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "CANCELLED",
     "timestamp": 1702134000000,
     "winner": "HOME_TEAM"
   },
@@ -3376,7 +3376,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SUSPENDED",
     "timestamp": 1702670400000,
     "winner": "AWAY_TEAM"
   },
@@ -3523,7 +3523,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SUSPENDED",
     "timestamp": 1702821600000,
     "winner": "HOME_TEAM"
   },
@@ -3733,7 +3733,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SUSPENDED",
     "timestamp": 1703422800000,
     "winner": "HOME_TEAM"
   },
@@ -3943,7 +3943,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SUSPENDED",
     "timestamp": 1703794500000,
     "winner": "AWAY_TEAM"
   },
@@ -4048,7 +4048,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SUSPENDED",
     "timestamp": 1703948400000,
     "winner": "HOME_TEAM"
   },
@@ -4195,7 +4195,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SUSPENDED",
     "timestamp": 1705149000000,
     "winner": "HOME_TEAM"
   },
@@ -4321,7 +4321,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SUSPENDED",
     "timestamp": 1705845600000,
     "winner": "DRAW"
   },
@@ -4489,7 +4489,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "POSTPONED",
     "timestamp": 1706729400000,
     "winner": "HOME_TEAM"
   },
@@ -4636,7 +4636,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "POSTPONED",
     "timestamp": 1706972400000,
     "winner": "DRAW"
   },
@@ -4762,7 +4762,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "POSTPONED",
     "timestamp": 1707064200000,
     "winner": "HOME_TEAM"
   },
@@ -4951,7 +4951,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "POSTPONED",
     "timestamp": 1707660000000,
     "winner": "AWAY_TEAM"
   },
@@ -5098,7 +5098,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "POSTPONED",
     "timestamp": 1708182000000,
     "winner": "HOME_TEAM"
   },
@@ -5245,7 +5245,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "POSTPONED",
     "timestamp": 1708543800000,
     "winner": "HOME_TEAM"
   },
@@ -5392,7 +5392,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "POSTPONED",
     "timestamp": 1708867800000,
     "winner": "HOME_TEAM"
   },
@@ -5518,7 +5518,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "PAUSED",
     "timestamp": 1709391600000,
     "winner": "AWAY_TEAM"
   },
@@ -5644,7 +5644,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "TIMED",
     "timestamp": 1709987400000,
     "winner": "HOME_TEAM"
   },
@@ -5686,7 +5686,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "PAUSED",
     "timestamp": 1709996400000,
     "winner": "DRAW"
   },
@@ -5791,7 +5791,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "TIMED",
     "timestamp": 1710079200000,
     "winner": "DRAW"
   },
@@ -5833,7 +5833,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "TIMED",
     "timestamp": 1710187200000,
     "winner": "HOME_TEAM"
   },
@@ -5854,7 +5854,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "TIMED",
     "timestamp": 1710358200000,
     "winner": "HOME_TEAM"
   },
@@ -5875,7 +5875,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "PAUSED",
     "timestamp": 1710601200000,
     "winner": "HOME_TEAM"
   },
@@ -6064,7 +6064,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "PAUSED",
     "timestamp": 1711810800000,
     "winner": "HOME_TEAM"
   },
@@ -6190,7 +6190,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "PAUSED",
     "timestamp": 1712082600000,
     "winner": "DRAW"
   },
@@ -6337,7 +6337,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1712255400000,
     "winner": "HOME_TEAM"
   },
@@ -6547,7 +6547,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1712507400000,
     "winner": "DRAW"
   },
@@ -6841,7 +6841,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1713637800000,
     "winner": "AWAY_TEAM"
   },
@@ -6946,7 +6946,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1713898800000,
     "winner": "HOME_TEAM"
   },
@@ -7030,7 +7030,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "IN_PLAY",
     "timestamp": 1713985200000,
     "winner": "HOME_TEAM"
   },
@@ -7303,7 +7303,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "LIVE",
     "timestamp": 1714762800000,
     "winner": "DRAW"
   },
@@ -7450,7 +7450,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "LIVE",
     "timestamp": 1714914000000,
     "winner": "HOME_TEAM"
   },
@@ -7618,7 +7618,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "LIVE",
     "timestamp": 1715436000000,
     "winner": "HOME_TEAM"
   },
@@ -7702,7 +7702,7 @@
       "winner": "DRAW"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "LIVE",
     "timestamp": 1715626800000,
     "winner": "DRAW"
   },
@@ -7744,7 +7744,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SCHEDULED",
     "timestamp": 1715798700000,
     "winner": "AWAY_TEAM"
   },
@@ -7765,7 +7765,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SCHEDULED",
     "timestamp": 1715799600000,
     "winner": "HOME_TEAM"
   },
@@ -7807,7 +7807,7 @@
       "winner": "AWAY_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SCHEDULED",
     "timestamp": 1716130800000,
     "winner": "AWAY_TEAM"
   },
@@ -7870,7 +7870,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SCHEDULED",
     "timestamp": 1716130800000,
     "winner": "HOME_TEAM"
   },
@@ -7954,7 +7954,7 @@
       "winner": "HOME_TEAM"
     },
     "stage": "REGULAR_SEASON",
-    "status": "FINISHED",
+    "status": "SCHEDULED",
     "timestamp": 1716130800000,
     "winner": "HOME_TEAM"
   },

@@ -17,11 +17,11 @@ export const GamesTable: FC = async ({}) => {
 
   return (
     <DataTable isData={!!games.length}>
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-end justify-between gap-3 py-2 sm:flex-row">
-        <GamesSwitcher />
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-end justify-between gap-2 py-2 sm:flex-row-reverse">
         <Suspense key={"finals-suspense"} fallback={<FinalsLoader />}>
           <Finals />
         </Suspense>
+        <GamesSwitcher />
       </div>
       {games.map((game) => {
         const sessionBet = sessionBets.find((bet) => bet.gameId === game.id);
