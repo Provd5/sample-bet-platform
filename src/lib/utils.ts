@@ -4,6 +4,7 @@ import { formatInTimeZone } from "date-fns-tz";
 import { twMerge } from "tailwind-merge";
 
 import {
+  type BetInterface,
   type constantsToTranslate,
   type GameInterface,
   type MatchWinner,
@@ -20,6 +21,24 @@ export function dateFormat(timestamp: number): string {
     "EEEE HH:mm | dd/MM/yyyy",
     { locale: pl },
   );
+}
+
+export function checkGameBetStatus(game: GameInterface, bet: BetInterface) {
+  const isGameInPlay = game.status === "IN_PLAY" || game.status === "PAUSED";
+
+  const accurateScoreHit =
+    game.regularTimeScore?.home === bet.homeGoals &&
+    game.regularTimeScore?.away === bet.awayGoals;
+
+  const scoreInPlay =
+    game.regularTimeScore && isGameInPlay
+      ? game.regularTimeScore.home <= bet.homeGoals &&
+        game.regularTimeScore.away <= bet.awayGoals
+      : false;
+
+  const winnerHit = game.regularTimeScore?.winner === bet.winner;
+
+  return { isGameInPlay, accurateScoreHit, scoreInPlay, winnerHit };
 }
 
 export function getMatchWinnerName(

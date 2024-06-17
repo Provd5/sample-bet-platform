@@ -3,7 +3,7 @@ import type { FC } from "react";
 import { type BetInterface, type GameInterface } from "~/types/games";
 
 import { CarouselItem } from "~/components/ui/carousel";
-import { cn, getMatchWinnerName } from "~/lib/utils";
+import { checkGameBetStatus, cn, getMatchWinnerName } from "~/lib/utils";
 
 interface BetCarouselItemProps {
   game: GameInterface;
@@ -14,17 +14,8 @@ export const BetCarouselItem: FC<BetCarouselItemProps> = ({
   game,
   userBet,
 }) => {
-  const isGameInPlay = game.status === "IN_PLAY" || game.status === "PAUSED";
-
-  const accurateScoreHit =
-    game.regularTimeScore?.home === userBet.homeGoals &&
-    game.regularTimeScore?.away === userBet.awayGoals;
-  const scoreInPlay =
-    game.regularTimeScore && isGameInPlay
-      ? game.regularTimeScore.home <= userBet.homeGoals &&
-        game.regularTimeScore.away <= userBet.awayGoals
-      : false;
-  const winnerHit = game.regularTimeScore?.winner === userBet.winner;
+  const { accurateScoreHit, scoreInPlay, winnerHit, isGameInPlay } =
+    checkGameBetStatus(game, userBet);
 
   return (
     <CarouselItem className="basis-1/3 select-none">
