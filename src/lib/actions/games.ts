@@ -69,6 +69,6 @@ export const getAllGames = cache(
   ["cache-getAllGames"],
   {
     tags: ["cache-getAllGames"],
-    revalidate: 120, // revalidate every 2 minutes
+    revalidate: 5, // revalidate every 5 sec
   },
 );
