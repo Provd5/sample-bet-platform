@@ -13,7 +13,7 @@ interface BetProps {
 }
 
 export const Bet: FC<BetProps> = async ({ game, sessionBet }) => {
-  const notStarted = game.status === "TIMED" || Date.now() <= game.timestamp;
+  const notStarted = game.status === "TIMED" && Date.now() <= game.timestamp;
 
   if (notStarted) {
     return <BetGameForm game={game} sessionBet={sessionBet} />;
