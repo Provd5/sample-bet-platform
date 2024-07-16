@@ -13,7 +13,6 @@ import {
 import { Button } from "./ui/button";
 
 const rules = [
-  "Wpisowe 50 zł na nagrodę dla pierwszych trzech miejsc. Podział nagród: 🥇60%🥈25%🥉15%",
   "Za poprawne wytypowanie zwycięzcy: +1pkt.",
   "Za poprawne wytypowanie dokładnego wyniku: +2pkt.",
   "Dokładny wynik można postawić niezależnie na kogo obstawiło się zwycięzce.",
