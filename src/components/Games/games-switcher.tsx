@@ -34,12 +34,15 @@ export const GamesSwitcher: FC = ({}) => {
     );
   };
 
-  if (!show) return <LoaderCircle className="size-10 shrink-0 animate-spin" />;
+  if (!show)
+    return (
+      <LoaderCircle className="size-10 shrink-0 animate-spin max-sm:mx-auto" />
+    );
   const isOpen = show === "OPEN";
 
   return (
     <>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2">
         <Button
           variant={isOpen ? "default" : "outline"}
           onClick={() => handleShowGames("OPEN")}

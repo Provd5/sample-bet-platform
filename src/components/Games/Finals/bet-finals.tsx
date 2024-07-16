@@ -19,12 +19,10 @@ export const BetFinals: FC<BetFinalsProps> = async ({ sessionBetFinals }) => {
 
   if (isFinished) {
     const finalsBets = await getAllUsersFinalsBets();
-
     return <BetFinalsUsers finalsBets={finalsBets} />;
   } else {
     const teams = await getAllTeams();
     if (!teams.length) return <DataLoadError />;
-
     return <BetFinalsForm teams={teams} sessionBetFinals={sessionBetFinals} />;
   }
 };

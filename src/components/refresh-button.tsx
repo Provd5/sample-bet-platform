@@ -4,7 +4,6 @@ import { type FC, useState } from "react";
 import { useRouter } from "next/navigation";
 import { LoaderCircle, RotateCw } from "lucide-react";
 
-import { updateSession } from "~/lib/auth/session";
 import { cn } from "~/lib/utils";
 
 import { Button } from "./ui/button";
@@ -29,19 +28,18 @@ export const RefreshButton: FC<DefaultRefreshButton | CustomRefreshButton> = ({
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const refresh = async () => {
-    await updateSession();
+  const refresh = () => {
     setIsLoading(true);
     router.refresh();
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 700);
   };
 
   return (
     <Button
       className={cn(
-        variant === "custom" ? className : "self-center w-11/12 max-w-sm"
+        variant === "custom" ? className : "w-11/12 max-w-sm self-center",
       )}
       variant={"outline"}
       onClick={() => refresh()}
@@ -53,7 +51,7 @@ export const RefreshButton: FC<DefaultRefreshButton | CustomRefreshButton> = ({
         children
       ) : (
         <>
-          <RotateCw className="size-5 shrink-0 mr-1" />
+          <RotateCw className="mr-1 size-5 shrink-0" />
           Odśwież
         </>
       )}

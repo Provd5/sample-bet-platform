@@ -9,6 +9,7 @@ import {
   AlertDialogTitle,
 } from "~/components/ui/alert-dialog";
 import { Separator } from "~/components/ui/separator";
+import { checkGameBetStatus } from "~/lib/utils";
 
 import { ModalCarousel } from "../../modal-carousel";
 import { GameTeam } from "../game-team";
@@ -20,6 +21,23 @@ interface BetUsersProps {
 }
 
 export const BetUsers: FC<BetUsersProps> = ({ game, bets }) => {
+  const sortedBets = bets.sort((a, b) => {
+    const ABet = checkGameBetStatus(game, a);
+    const BBet = checkGameBetStatus(game, b);
+
+    if (ABet.accurateScoreHit && !BBet.accurateScoreHit) {
+      return -1;
+    }
+    if (ABet.winnerHit && !BBet.winnerHit) {
+      return -1;
+    }
+    if (ABet.scoreInPlay && !BBet.scoreInPlay) {
+      return -1;
+    }
+
+    return 1;
+  });
+
   return (
     <div>
       <AlertDialogHeader>
@@ -28,7 +46,7 @@ export const BetUsers: FC<BetUsersProps> = ({ game, bets }) => {
       <div className="!my-3 flex flex-col justify-between gap-x-2 gap-y-4 sm:flex-row sm:items-center">
         {bets.length > 0 ? (
           <ModalCarousel>
-            {bets.map((userBet) => (
+            {sortedBets.map((userBet) => (
               <BetCarouselItem
                 key={`BetUsers-BetCarouselItem-${userBet.id}`}
                 game={game}

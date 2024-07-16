@@ -1,3 +1,4 @@
+import { RefreshSession } from "~/components/refresh-session";
 import { redirectIfSessionUser } from "~/lib/auth/redirects";
 
 export default async function ProtectedLayout({
@@ -7,5 +8,10 @@ export default async function ProtectedLayout({
 }>) {
   await redirectIfSessionUser(false);
 
-  return children;
+  return (
+    <>
+      <RefreshSession />
+      {children}
+    </>
+  );
 }

@@ -52,17 +52,11 @@ export const getAllGames = cache(
       // IN_PLAY and PAUSED games always on top
       const sortedGames = gamesData.sort((a, b) => {
         if (
-          (a.status === "IN_PLAY" || a.status === "PAUSED") &&
+          a.status !== "TIMED" &&
           b.status !== "IN_PLAY" &&
           b.status !== "PAUSED"
         )
           return -1;
-        if (
-          a.status !== "IN_PLAY" &&
-          a.status !== "PAUSED" &&
-          (b.status === "IN_PLAY" || b.status === "PAUSED")
-        )
-          return 1;
         return 0;
       });
 
@@ -75,6 +69,6 @@ export const getAllGames = cache(
   ["cache-getAllGames"],
   {
     tags: ["cache-getAllGames"],
-    revalidate: 120, // revalidate every 2 minutes
+    revalidate: 5, // revalidate every 5 sec
   },
 );

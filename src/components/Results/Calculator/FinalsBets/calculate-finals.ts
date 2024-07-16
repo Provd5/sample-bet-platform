@@ -30,4 +30,18 @@ export function calculateFinals(
       });
     }
   });
+
+  let penaltyUsers = ["FQxhJQu4JqOgdp5vFXjPjSzrp632", "dHMcd12lkbXCe2gIGChRfVlX6LI2"];
+  penaltyUsers.forEach((userId) => {
+    if (userResultsMap.has(userId)) {
+      const existingUser = userResultsMap.get(userId);
+      if (existingUser!.points.currentPoints > 0) {
+        existingUser!.points.currentPoints -= 1;
+      }
+      if (existingUser!.points.currentLivePoints > 0) {
+        existingUser!.points.currentLivePoints -= 1;
+      }
+    }
+  });
+
 }

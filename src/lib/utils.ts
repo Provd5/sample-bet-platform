@@ -1,9 +1,10 @@
 import { type ClassValue, clsx } from "clsx";
-import { format } from "date-fns";
 import { pl } from "date-fns/locale";
+import { formatInTimeZone } from "date-fns-tz";
 import { twMerge } from "tailwind-merge";
 
 import {
+  type BetInterface,
   type constantsToTranslate,
   type GameInterface,
   type MatchWinner,
@@ -14,12 +15,35 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function dateFormat(timestamp: number): string {
-  return format(new Date(timestamp), "EEEE HH:mm | dd/MM/yyyy", { locale: pl });
+  return formatInTimeZone(
+    new Date(timestamp),
+    "Europe/Warsaw",
+    "EEEE HH:mm | dd/MM/yyyy",
+    { locale: pl },
+  );
+}
+
+export function checkGameBetStatus(game: GameInterface, bet: BetInterface) {
+  const isGameInPlay = game.status === "IN_PLAY" || game.status === "PAUSED";
+
+  const accurateScoreHit =
+    game.regularTimeScore?.home === bet.homeGoals &&
+    game.regularTimeScore?.away === bet.awayGoals;
+
+  const scoreInPlay =
+    game.regularTimeScore && isGameInPlay
+      ? game.regularTimeScore.home <= bet.homeGoals &&
+        game.regularTimeScore.away <= bet.awayGoals
+      : false;
+
+  const winnerHit = game.regularTimeScore?.winner === bet.winner;
+
+  return { isGameInPlay, accurateScoreHit, scoreInPlay, winnerHit };
 }
 
 export function getMatchWinnerName(
   matchWinner: MatchWinner,
-  game: GameInterface
+  game: GameInterface,
 ): string {
   switch (matchWinner) {
     case "AWAY_TEAM":
@@ -32,7 +56,7 @@ export function getMatchWinnerName(
 }
 
 export function translateConstantsToPolish(
-  constant: constantsToTranslate
+  constant: constantsToTranslate,
 ): string {
   switch (constant) {
     case "HOME_TEAM":

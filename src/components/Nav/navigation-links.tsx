@@ -7,6 +7,7 @@ import { getUser } from "~/lib/actions/users";
 import { readSessionId } from "~/lib/auth/session";
 
 import { Logout } from "../Auth/logout";
+import { Egg } from "../egg";
 import { NavigationLink } from "./navigation-link";
 
 export const NavigationLinks: FC = async ({}) => {
@@ -18,11 +19,13 @@ export const NavigationLinks: FC = async ({}) => {
 
   return (
     <>
-      <div className="mr-auto flex flex-col">
-        <h1 className="-mb-1 text-sm font-semibold">{CURRENT_EVENT}</h1>
+      <div className="mr-auto flex flex-col self-start">
+        <h1 className="-mb-0.5 text-sm font-semibold">{CURRENT_EVENT}</h1>
         <h1 className="flex items-center gap-1">
           <CircleUser className="size-5" />
-          <span className="text-lg font-bold">{user?.username}</span>
+          <Egg>
+            <span className="text-lg font-bold">{user?.username}</span>
+          </Egg>
         </h1>
       </div>
 
